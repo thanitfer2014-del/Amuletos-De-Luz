@@ -1,0 +1,8 @@
+# Robots.txt de Amuletos de Luz
+# [POR DEFINIR]: reemplaza "https://[POR DEFINIR]/" por la
+# dirección real del sitio antes de publicar.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://[POR DEFINIR]/sitemap.xml

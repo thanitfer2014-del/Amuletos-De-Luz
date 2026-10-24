@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SITEMAP DE AMULETOS DE LUZ
+  [POR DEFINIR]: reemplaza TODAS las apariciones de
+  "https://[POR DEFINIR]/" por la dirección real del sitio,
+  por ejemplo https://amuletos-de-luz.netlify.app/
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://[POR DEFINIR]/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://[POR DEFINIR]/img/portada.jpg</image:loc>
+      <image:title>Amuletos de Luz</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://[POR DEFINIR]/img/producto1.jpg</image:loc>
+      <image:title>Cielo Profundo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://[POR DEFINIR]/img/producto2.jpg</image:loc>
+      <image:title>Raíz y Fuerza</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://[POR DEFINIR]/img/producto3.jpg</image:loc>
+      <image:title>Noche Azul</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://[POR DEFINIR]/img/producto4.jpg</image:loc>
+      <image:title>Arcoíris de Luz</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://[POR DEFINIR]/img/producto5.jpg</image:loc>
+      <image:title>Verde Esperanza</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://[POR DEFINIR]/img/producto6.jpg</image:loc>
+      <image:title>Estrella de Regalo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://[POR DEFINIR]/img/producto7.jpg</image:loc>
+      <image:title>Decena Protectora</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://[POR DEFINIR]/img/producto8.jpg</image:loc>
+      <image:title>Armonía de Piedras</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://[POR DEFINIR]/img/producto9.jpg</image:loc>
+      <image:title>Sol y Turquesa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://[POR DEFINIR]/img/producto10.jpg</image:loc>
+      <image:title>Dúo Mano de Fátima</image:title>
+    </image:image>
+  </url>
+</urlset>

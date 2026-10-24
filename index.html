@@ -1,0 +1,5332 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="claro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ==========================================================
+       SEO PRINCIPAL
+       [POR DEFINIR]: reemplaza todas las apariciones de
+       "https://[POR DEFINIR]/" por tu dirección real de Netlify,
+       GitHub Pages u otro alojamiento gratuito.
+       ========================================================== -->
+  <title>Amuletos de Luz | Joyería artesanal con propósito</title>
+  <meta name="description" content="Joyería artesanal con piedras naturales y materiales duraderos. Amuletos con significado y asesoría. Pide por WhatsApp. Envíos a gran parte de Colombia.">
+  <meta name="keywords" content="comprar pulseras con piedras naturales online, joyería holística en Soacha, amuletos de protección Colombia, accesorios con significado, envío de pulseras a toda Colombia">
+  <meta name="author" content="Amuletos de Luz">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#8B1A3A">
+  <link rel="canonical" href="https://[POR DEFINIR]/">
+
+  <!-- Open Graph y Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Amuletos de Luz">
+  <meta property="og:title" content="Amuletos de Luz | Joyería artesanal con propósito">
+  <meta property="og:description" content="Joyería artesanal con piedras naturales y materiales duraderos. Amuletos con significado y asesoría. Pide por WhatsApp. Envíos a gran parte de Colombia.">
+  <meta property="og:url" content="https://[POR DEFINIR]/">
+  <meta property="og:image" content="https://[POR DEFINIR]/img/portada.jpg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="572">
+  <meta property="og:image:alt" content="Textura rosada con destellos y siluetas de flor de loto de Amuletos de Luz">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amuletos de Luz | Joyería artesanal con propósito">
+  <meta name="twitter:description" content="Joyería artesanal con piedras naturales y materiales duraderos. Amuletos con significado y asesoría. Pide por WhatsApp. Envíos a gran parte de Colombia.">
+  <meta name="twitter:image" content="https://[POR DEFINIR]/img/portada.jpg">
+  <meta name="twitter:image:alt" content="Textura rosada con destellos y siluetas de flor de loto de Amuletos de Luz">
+
+  <!-- Favicon provisional.
+       [POR CREAR] img/favicon.png: flor de loto del logo recortada.
+       Cuando exista, reemplaza la línea siguiente por:
+       <link rel="icon" type="image/png" href="img/favicon.png"> -->
+  <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+  <link rel="apple-touch-icon" href="img/logo.jpg">
+
+  <!-- Tipografías con respaldo local -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tema inicial y mejora progresiva. Si localStorage no está
+       disponible, la página sigue funcionando con el tema del sistema. -->
+  <script>
+    (function () {
+      var raiz = document.documentElement;
+      var tema = "";
+      try {
+        tema = localStorage.getItem("amuletos-tema") || "";
+      } catch (error) {
+        tema = "";
+      }
+      if (tema !== "claro" && tema !== "oscuro") {
+        try {
+          tema = window.matchMedia("(prefers-color-scheme: dark)").matches ? "oscuro" : "claro";
+        } catch (error) {
+          tema = "claro";
+        }
+      }
+      raiz.setAttribute("data-tema", tema);
+      raiz.classList.add("js");
+    })();
+  </script>
+
+  <style>
+    /* ==========================================================
+       1. TOKENS DE DISEÑO Y TEMAS
+       ========================================================== */
+    :root {
+      color-scheme: light;
+      --fondo: #FFF9F7;
+      --fondo-alt: #FDF2F1;
+      --fondo-rosa: #F9E7EA;
+      --superficie: #FFFDFC;
+      --superficie-fuerte: #FFFFFF;
+      --texto: #3A2A2E;
+      --texto-suave: #6D565C;
+      --titulo: #8B1A3A;
+      --vino: #8B1A3A;
+      --vino-oscuro: #62122C;
+      --vino-profundo: #4B0E23;
+      --rosa: #F4B6C2;
+      --oro: #C9A66B;
+      --oro-texto: #7C5C29;
+      --borde: rgba(139, 26, 58, 0.13);
+      --borde-fuerte: rgba(139, 26, 58, 0.24);
+      --encabezado: rgba(255, 249, 247, 0.88);
+      --sombra: 0 14px 40px rgba(81, 29, 43, 0.07);
+      --sombra-fuerte: 0 24px 60px rgba(81, 29, 43, 0.13);
+      --foco: #8B1A3A;
+      --boton-texto: #FFF9F7;
+      --degradado-suave: linear-gradient(160deg, #FFF9F7 0%, #FDF0F1 55%, #FFF9F7 100%);
+      --fuente-titulos: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      --fuente-texto: "Poppins", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      --alto-encabezado: 4.75rem;
+      --radio: 1rem;
+      --ancho: 75rem;
+    }
+
+    [data-tema="oscuro"] {
+      color-scheme: dark;
+      --fondo: #171013;
+      --fondo-alt: #1E1418;
+      --fondo-rosa: #28171D;
+      --superficie: #24181C;
+      --superficie-fuerte: #2C1D22;
+      --texto: #F3E6E2;
+      --texto-suave: #D4C1BF;
+      --titulo: #F4C2CC;
+      --vino: #A92F50;
+      --vino-oscuro: #7B1834;
+      --vino-profundo: #2B0B16;
+      --rosa: #E8A5B7;
+      --oro: #D8B982;
+      --oro-texto: #E4C998;
+      --borde: rgba(244, 182, 194, 0.17);
+      --borde-fuerte: rgba(244, 182, 194, 0.3);
+      --encabezado: rgba(23, 16, 19, 0.9);
+      --sombra: 0 14px 40px rgba(0, 0, 0, 0.26);
+      --sombra-fuerte: 0 24px 60px rgba(0, 0, 0, 0.4);
+      --foco: #F4B6C2;
+      --boton-texto: #FFF8F6;
+      --degradado-suave: linear-gradient(160deg, #171013 0%, #21151A 55%, #171013 100%);
+    }
+
+    /* ==========================================================
+       2. BASE, ACCESIBILIDAD Y UTILIDADES
+       ========================================================== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      scroll-padding-top: calc(var(--alto-encabezado) + 1rem);
+    }
+
+    body {
+      margin: 0;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: var(--fuente-texto);
+      font-size: clamp(0.94rem, 0.9rem + 0.15vw, 1.04rem);
+      font-weight: 400;
+      line-height: 1.75;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.menu-abierto,
+    body.visor-abierto {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: 0.2em;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      color: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      color: var(--titulo);
+      font-family: var(--fuente-titulos);
+      font-weight: 600;
+      line-height: 1.06;
+      letter-spacing: -0.018em;
+    }
+
+    h2 {
+      font-size: clamp(2.55rem, 4.6vw, 4.35rem);
+    }
+
+    h3 {
+      font-size: clamp(1.3rem, 2vw, 1.7rem);
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+    }
+
+    ::selection {
+      background: var(--vino);
+      color: #FFF9F7;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--foco);
+      outline-offset: 4px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    #contenido-principal:focus {
+      outline: none;
+    }
+
+    .contenedor {
+      width: min(100% - clamp(2.25rem, 5vw, 4.5rem), var(--ancho));
+      margin-inline: auto;
+    }
+
+    .visualmente-oculto {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    .salto-contenido {
+      position: fixed;
+      z-index: 3000;
+      top: 0.85rem;
+      left: 0.85rem;
+      padding: 0.7rem 1rem;
+      border-radius: 0.6rem;
+      background: #FFF9F7;
+      color: #6A132F;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+      transform: translateY(-180%);
+      transition: transform 0.2s ease;
+    }
+
+    .salto-contenido:focus {
+      transform: translateY(0);
+    }
+
+    .icono {
+      width: 1.25rem;
+      height: 1.25rem;
+      display: block;
+      flex: none;
+    }
+
+    .sprite {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    /* Botones */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-height: 3rem;
+      padding: 0.82rem 1.35rem;
+      border: 1px solid transparent;
+      border-radius: 0.8rem;
+      background: var(--vino);
+      color: var(--boton-texto);
+      font-family: var(--fuente-texto);
+      font-size: 0.82rem;
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: 0.015em;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(139, 26, 58, 0.18);
+      transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: var(--vino-oscuro);
+      box-shadow: 0 14px 30px rgba(139, 26, 58, 0.26);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn .icono {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+
+    .btn--pequeno {
+      min-height: 2.7rem;
+      padding: 0.62rem 1rem;
+      font-size: 0.77rem;
+    }
+
+    .btn--grande {
+      min-height: 3.65rem;
+      padding: 1.05rem 2rem;
+      font-size: 0.92rem;
+      border-radius: 0.9rem;
+    }
+
+    .btn--claro {
+      background: #FFF9F7;
+      color: #77162F;
+      border-color: rgba(255, 249, 247, 0.5);
+      box-shadow: 0 16px 36px rgba(46, 5, 17, 0.25);
+    }
+
+    .btn--claro:hover {
+      background: #FFFFFF;
+      color: #5E0F25;
+      box-shadow: 0 20px 44px rgba(46, 5, 17, 0.32);
+    }
+
+    .btn--fantasma {
+      background: rgba(255, 249, 247, 0.06);
+      color: #FFF9F7;
+      border-color: rgba(255, 249, 247, 0.46);
+      box-shadow: none;
+      backdrop-filter: blur(5px);
+    }
+
+    .btn--fantasma:hover {
+      background: rgba(255, 249, 247, 0.14);
+      border-color: rgba(255, 249, 247, 0.72);
+      box-shadow: none;
+    }
+
+    .btn-ancho {
+      width: 100%;
+    }
+
+    /* Aparición al bajar */
+    .js .revelar {
+      opacity: 0;
+      transform: translateY(1.35rem);
+      transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--demora, 0ms);
+    }
+
+    .js .revelar.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Encabezados de sección */
+    .seccion {
+      position: relative;
+      padding-block: clamp(4.25rem, 7.5vw, 7.5rem);
+      overflow: hidden;
+    }
+
+    .seccion__cabecera {
+      max-width: 47rem;
+      margin-bottom: clamp(2.2rem, 4.5vw, 3.8rem);
+    }
+
+    .seccion__cabecera--centrada {
+      max-width: 48rem;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .seccion__cabecera--centrada .eyebrow {
+      justify-content: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin: 0 0 1.1rem;
+      color: var(--titulo);
+      font-family: var(--fuente-texto);
+      font-size: 0.66rem;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 2rem;
+      height: 1px;
+      flex: none;
+      background: var(--oro);
+    }
+
+    .seccion__intro {
+      max-width: 42rem;
+      margin: 1.25rem 0 0;
+      color: var(--texto-suave);
+      font-size: clamp(0.96rem, 1.4vw, 1.06rem);
+      line-height: 1.85;
+    }
+
+    .seccion__cabecera--centrada .seccion__intro {
+      margin-inline: auto;
+    }
+
+    .adorno-loto {
+      position: absolute;
+      color: var(--vino);
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .seccion > .contenedor {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ==========================================================
+       3. ENCABEZADO Y NAVEGACIÓN
+       ========================================================== */
+    .encabezado {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--encabezado);
+      border-bottom: 1px solid var(--borde);
+      backdrop-filter: blur(18px) saturate(135%);
+      -webkit-backdrop-filter: blur(18px) saturate(135%);
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+    .encabezado.compacto {
+      box-shadow: 0 10px 32px rgba(62, 20, 32, 0.09);
+    }
+
+    .encabezado__barra {
+      min-height: var(--alto-encabezado);
+      display: flex;
+      align-items: center;
+      gap: clamp(0.8rem, 2vw, 1.85rem);
+    }
+
+    .marca {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      flex: none;
+      text-decoration: none;
+    }
+
+    .marca__logo,
+    .pie__logo {
+      width: 3rem;
+      aspect-ratio: 1;
+      flex: none;
+      overflow: hidden;
+      border: 1px solid var(--borde-fuerte);
+      border-radius: 0.65rem;
+      background: #FFFDFC;
+      box-shadow: 0 4px 14px rgba(79, 19, 36, 0.1);
+    }
+
+    .marca__logo img,
+    .pie__logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .marca__texto {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .marca__nombre {
+      color: var(--titulo);
+      font-family: var(--fuente-titulos);
+      font-size: 1.35rem;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.025em;
+      white-space: nowrap;
+    }
+
+    .marca__lema {
+      margin-top: 0.32rem;
+      color: var(--texto-suave);
+      font-family: var(--fuente-texto);
+      font-size: 0.5rem;
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .navegacion {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(0.7rem, 1.45vw, 1.3rem);
+      margin-left: auto;
+    }
+
+    .navegacion > a,
+    .nav-mas > summary {
+      position: relative;
+      padding: 0.45rem 0;
+      color: var(--texto);
+      font-family: var(--fuente-texto);
+      font-size: 0.76rem;
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .navegacion > a::after,
+    .nav-mas > summary::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      height: 1px;
+      background: var(--vino);
+      transition: right 0.28s ease;
+    }
+
+    .navegacion > a:hover,
+    .nav-mas > summary:hover,
+    .navegacion > a[aria-current="page"] {
+      color: var(--vino);
+    }
+
+    .navegacion > a:hover::after,
+    .nav-mas > summary:hover::after,
+    .navegacion > a[aria-current="page"]::after {
+      right: 0;
+    }
+
+    .nav-mas {
+      position: relative;
+    }
+
+    .nav-mas > summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.28rem;
+      list-style: none;
+    }
+
+    .nav-mas > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .nav-mas > summary .icono {
+      width: 0.82rem;
+      height: 0.82rem;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-mas[open] > summary {
+      color: var(--vino);
+    }
+
+    .nav-mas[open] > summary .icono {
+      transform: rotate(180deg);
+    }
+
+    .nav-mas__panel {
+      position: absolute;
+      top: calc(100% + 0.9rem);
+      right: 0;
+      display: grid;
+      min-width: 15rem;
+      padding: 0.5rem;
+      border: 1px solid var(--borde);
+      border-radius: 0.9rem;
+      background: var(--superficie-fuerte);
+      box-shadow: var(--sombra-fuerte);
+      z-index: 20;
+    }
+
+    .nav-mas__panel a {
+      padding: 0.65rem 0.8rem;
+      border-radius: 0.55rem;
+      color: var(--texto);
+      font-size: 0.79rem;
+      text-decoration: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-mas__panel a:hover {
+      background: var(--fondo-rosa);
+      color: var(--vino);
+    }
+
+    .encabezado__acciones {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      flex: none;
+    }
+
+    .boton-tema,
+    .boton-menu {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.7rem;
+      height: 2.7rem;
+      padding: 0;
+      border: 1px solid var(--borde);
+      border-radius: 0.72rem;
+      background: transparent;
+      color: var(--titulo);
+      cursor: pointer;
+      transition: background-color 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
+    }
+
+    .boton-tema:hover,
+    .boton-menu:hover {
+      background: var(--fondo-rosa);
+      border-color: var(--borde-fuerte);
+      transform: translateY(-1px);
+    }
+
+    .boton-tema .icono,
+    .boton-menu .icono {
+      width: 1.12rem;
+      height: 1.12rem;
+    }
+
+    [data-tema="claro"] .boton-tema__sol,
+    [data-tema="oscuro"] .boton-tema__luna {
+      display: none;
+    }
+
+    .boton-menu {
+      display: none;
+    }
+
+    .boton-menu__cerrar {
+      display: none;
+    }
+
+    .boton-menu[aria-expanded="true"] .boton-menu__abrir {
+      display: none;
+    }
+
+    .boton-menu[aria-expanded="true"] .boton-menu__cerrar {
+      display: block;
+    }
+
+    /* Menú móvil / tablet */
+    .menu-movil {
+      position: fixed;
+      inset: var(--alto-encabezado) 0 0;
+      z-index: 90;
+      display: flex;
+      justify-content: flex-end;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transition: opacity 0.32s ease, visibility 0.32s ease;
+    }
+
+    .menu-movil.abierto {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .menu-movil__fondo {
+      position: absolute;
+      inset: 0;
+      border: 0;
+      padding: 0;
+      background: rgba(30, 7, 16, 0.58);
+      backdrop-filter: blur(4px);
+      cursor: pointer;
+    }
+
+    .menu-movil__panel {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      width: min(100%, 36rem);
+      height: 100%;
+      padding: 1.1rem 1.35rem 2.5rem;
+      overflow-y: auto;
+      background: var(--fondo);
+      border-left: 1px solid var(--borde);
+      box-shadow: -20px 0 60px rgba(31, 7, 15, 0.22);
+      transform: translateX(100%);
+      transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .menu-movil.abierto .menu-movil__panel {
+      transform: translateX(0);
+    }
+
+    .menu-movil__barra {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .menu-movil__rotulo {
+      margin: 0;
+      color: var(--texto-suave);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .menu-movil__cerrar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.6rem;
+      height: 2.6rem;
+      padding: 0;
+      border: 1px solid var(--borde);
+      border-radius: 0.65rem;
+      background: transparent;
+      color: var(--titulo);
+      cursor: pointer;
+    }
+
+    .menu-movil__lista {
+      display: grid;
+      gap: 0.1rem;
+      list-style: none;
+    }
+
+    .menu-movil__lista a {
+      display: flex;
+      align-items: baseline;
+      gap: 0.85rem;
+      padding: 0.6rem 0.3rem;
+      border-bottom: 1px solid var(--borde);
+      color: var(--texto);
+      font-family: var(--fuente-titulos);
+      font-size: 1.45rem;
+      font-weight: 600;
+      line-height: 1.15;
+      text-decoration: none;
+      transition: color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    .menu-movil__lista a:hover {
+      padding-left: 0.6rem;
+      color: var(--vino);
+    }
+
+    .menu-movil__num {
+      flex: none;
+      color: var(--oro-texto);
+      font-family: var(--fuente-texto);
+      font-size: 0.57rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+
+    .menu-movil__pie {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: auto;
+      padding-top: 1rem;
+    }
+
+    .menu-movil__social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      color: var(--texto-suave);
+      font-size: 0.78rem;
+    }
+
+    .menu-movil__social a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+    }
+
+    .menu-movil__social a:hover {
+      color: var(--vino);
+    }
+
+    .menu-movil__social .icono {
+      width: 0.95rem;
+      height: 0.95rem;
+    }
+
+    /* ==========================================================
+       4. PORTADA
+       ========================================================== */
+    .portada {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: max(40rem, calc(100svh - var(--alto-encabezado)));
+      padding-block: clamp(4.5rem, 10vh, 7.5rem);
+      overflow: hidden;
+      isolation: isolate;
+      color: #FFF9F7;
+      text-align: center;
+    }
+
+    .portada__fondo {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .portada__velo {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(circle at 50% 43%, rgba(244, 182, 194, 0.13), transparent 43%),
+        linear-gradient(180deg, rgba(67, 8, 27, 0.72) 0%, rgba(139, 26, 58, 0.6) 45%, rgba(55, 6, 23, 0.88) 100%);
+    }
+
+    .portada::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255, 249, 247, 0.15) 0.6px, transparent 0.6px);
+      background-size: 5px 5px;
+      opacity: 0.16;
+      mix-blend-mode: soft-light;
+    }
+
+    .portada__contenido {
+      width: min(100% - clamp(2.25rem, 6vw, 5rem), 58rem);
+      margin-inline: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .portada__ubicacion {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      margin: 0 0 1.4rem;
+      color: rgba(255, 249, 247, 0.8);
+      font-size: 0.63rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .portada__ubicacion::before,
+    .portada__ubicacion::after {
+      content: "";
+      width: 1.75rem;
+      height: 1px;
+      background: rgba(201, 166, 107, 0.8);
+    }
+
+    .portada__logo {
+      position: relative;
+      width: clamp(10.25rem, 21vw, 15.5rem);
+      margin: 0 auto clamp(1.5rem, 3.5vh, 2.3rem);
+      padding: 0.55rem;
+      border: 1px solid rgba(255, 249, 247, 0.52);
+      border-radius: 1.25rem;
+      background: #FFFDFC;
+      box-shadow:
+        0 0 0 0.38rem rgba(255, 249, 247, 0.09),
+        0 24px 65px rgba(36, 4, 15, 0.38),
+        0 0 7rem rgba(244, 182, 194, 0.36);
+    }
+
+    .portada__logo::before,
+    .portada__logo::after {
+      content: "";
+      position: absolute;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-color: #C9A66B;
+      border-style: solid;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .portada__logo::before {
+      top: -0.45rem;
+      left: -0.45rem;
+      border-width: 1px 0 0 1px;
+      border-radius: 0.5rem 0 0 0;
+    }
+
+    .portada__logo::after {
+      right: -0.45rem;
+      bottom: -0.45rem;
+      border-width: 0 1px 1px 0;
+      border-radius: 0 0 0.5rem 0;
+    }
+
+    .portada__logo img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 0.82rem;
+    }
+
+    .portada__titulo {
+      max-width: 50rem;
+      margin-inline: auto;
+      color: #FFF9F7;
+      font-size: clamp(2.75rem, 6.2vw, 5.9rem);
+      font-weight: 600;
+      line-height: 0.96;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+      text-shadow: 0 2px 24px rgba(38, 3, 15, 0.18);
+    }
+
+    .portada__titulo em {
+      color: #F4B6C2;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .portada__texto {
+      max-width: 37rem;
+      margin: 1.35rem auto 0;
+      color: rgba(255, 249, 247, 0.84);
+      font-size: clamp(0.9rem, 1.5vw, 1.02rem);
+      font-weight: 300;
+      line-height: 1.8;
+      text-wrap: balance;
+    }
+
+    .portada__acciones {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 1.9rem;
+    }
+
+    .portada__sellos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.55rem 1.15rem;
+      margin: 2.35rem 0 0;
+      padding: 0;
+      list-style: none;
+      color: rgba(255, 249, 247, 0.84);
+      font-size: 0.67rem;
+      font-weight: 400;
+      letter-spacing: 0.045em;
+    }
+
+    .portada__sellos li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.43rem;
+    }
+
+    .portada__sellos .icono {
+      width: 0.78rem;
+      height: 0.78rem;
+      color: #C9A66B;
+    }
+
+    .portada__scroll {
+      position: absolute;
+      left: 50%;
+      bottom: 1.4rem;
+      z-index: 2;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.45rem;
+      color: rgba(255, 249, 247, 0.65);
+      font-size: 0.56rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transform: translateX(-50%);
+    }
+
+    .portada__scroll .icono {
+      width: 0.85rem;
+      height: 0.85rem;
+    }
+
+    /* Decoraciones flotantes de la portada */
+    .portada__decoracion {
+      position: absolute;
+      z-index: 0;
+      color: #F4B6C2;
+      pointer-events: none;
+    }
+
+    .portada__decoracion--loto-izq {
+      left: -5rem;
+      bottom: -4.5rem;
+      width: clamp(16rem, 32vw, 31rem);
+      opacity: 0.15;
+      transform: rotate(-13deg);
+      animation: flotar-loto 14s ease-in-out infinite alternate;
+    }
+
+    .portada__decoracion--loto-der {
+      top: 3.5rem;
+      right: -4rem;
+      width: clamp(12rem, 24vw, 24rem);
+      opacity: 0.12;
+      transform: rotate(15deg);
+      animation: flotar-loto 17s ease-in-out infinite alternate-reverse;
+    }
+
+    .portada__destello {
+      position: absolute;
+      z-index: 0;
+      color: #F4B6C2;
+      opacity: 0.5;
+      pointer-events: none;
+      animation: destellar 8s ease-in-out infinite;
+    }
+
+    .portada__destello--1 {
+      top: 24%;
+      left: 9%;
+      width: 1.25rem;
+    }
+
+    .portada__destello--2 {
+      top: 34%;
+      right: 12%;
+      width: 0.8rem;
+      color: #C9A66B;
+      animation-delay: -2.5s;
+    }
+
+    .portada__destello--3 {
+      bottom: 24%;
+      left: 17%;
+      width: 0.7rem;
+      color: #C9A66B;
+      animation-delay: -4.5s;
+    }
+
+    .portada__destello--4 {
+      right: 18%;
+      bottom: 30%;
+      width: 1rem;
+      animation-delay: -1.2s;
+    }
+
+    @keyframes flotar-loto {
+      from { transform: translate3d(0, 0, 0) rotate(-13deg); }
+      to { transform: translate3d(0.8rem, -0.9rem, 0) rotate(-10deg); }
+    }
+
+    @keyframes destellar {
+      0%, 100% { opacity: 0.25; transform: scale(0.9) rotate(0deg); }
+      50% { opacity: 0.65; transform: scale(1.04) rotate(8deg); }
+    }
+
+    /* ==========================================================
+       5. QUIÉNES SOMOS
+       ========================================================== */
+    .seccion--esencia {
+      background:
+        radial-gradient(circle at 12% 14%, rgba(244, 182, 194, 0.22), transparent 29%),
+        radial-gradient(circle at 87% 77%, rgba(201, 166, 107, 0.09), transparent 26%),
+        linear-gradient(180deg, var(--fondo-rosa) 0%, var(--fondo) 100%);
+    }
+
+    .seccion--esencia::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(var(--borde-fuerte) 0.55px, transparent 0.55px);
+      background-size: 1.25rem 1.25rem;
+      opacity: 0.35;
+      mask-image: linear-gradient(to bottom, black, transparent 80%);
+    }
+
+    .pilares {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .pilar {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: clamp(1.5rem, 2.8vw, 2.15rem);
+      border: 1px solid var(--borde);
+      border-radius: 1.1rem;
+      background: var(--superficie);
+      box-shadow: var(--sombra);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .pilar:hover {
+      transform: translateY(-0.35rem);
+      border-color: var(--borde-fuerte);
+      box-shadow: var(--sombra-fuerte);
+    }
+
+    .pilar__icono {
+      display: grid;
+      place-items: center;
+      width: 2.8rem;
+      height: 2.8rem;
+      margin-bottom: 1.4rem;
+      border: 1px solid var(--borde-fuerte);
+      border-radius: 50%;
+      background: var(--fondo-rosa);
+      color: var(--vino);
+    }
+
+    .pilar__icono .icono {
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+
+    .pilar h3 {
+      margin-bottom: 0.75rem;
+      font-size: clamp(1.75rem, 2.8vw, 2.15rem);
+    }
+
+    .pilar p {
+      margin: 0;
+      color: var(--texto-suave);
+      font-size: 0.9rem;
+      line-height: 1.85;
+    }
+
+    .pilar--destacado {
+      border-color: rgba(201, 166, 107, 0.34);
+      background:
+        radial-gradient(circle at 90% 5%, rgba(244, 182, 194, 0.24), transparent 34%),
+        linear-gradient(148deg, #64132D 0%, #8B1A3A 64%, #70152F 100%);
+      box-shadow: 0 18px 45px rgba(88, 18, 39, 0.23);
+    }
+
+    .pilar--destacado:hover {
+      box-shadow: 0 26px 60px rgba(88, 18, 39, 0.3);
+    }
+
+    .pilar--destacado .pilar__icono {
+      border-color: rgba(255, 249, 247, 0.25);
+      background: rgba(255, 249, 247, 0.1);
+      color: #F4B6C2;
+    }
+
+    .pilar--destacado h3 {
+      color: #FFF9F7;
+    }
+
+    .pilar--destacado p {
+      color: rgba(255, 249, 247, 0.82);
+    }
+
+    .pilar--destacado strong {
+      color: #FFF9F7;
+      font-weight: 500;
+    }
+
+    /* ==========================================================
+       6. CATÁLOGO
+       ========================================================== */
+    .seccion--catalogo {
+      background:
+        radial-gradient(circle at 96% 8%, rgba(244, 182, 194, 0.18), transparent 23%),
+        var(--fondo);
+    }
+
+    .catalogo__cabecera {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+
+    .catalogo__cabecera .seccion__cabecera {
+      margin-bottom: 0;
+    }
+
+    .catalogo__sello {
+      display: none;
+      align-items: center;
+      gap: 0.7rem;
+      flex: none;
+      padding-bottom: 0.6rem;
+      color: var(--oro-texto);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .catalogo__sello .icono {
+      width: 1rem;
+      height: 1rem;
+      color: var(--oro);
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(1rem, 2.2vw, 1.5rem);
+    }
+
+    .producto {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 0.55rem 0.55rem 0.8rem;
+      border: 1px solid var(--borde);
+      border-radius: 1.1rem;
+      background: var(--superficie);
+      box-shadow: 0 9px 28px rgba(81, 29, 43, 0.055);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .producto:hover {
+      transform: translateY(-0.35rem);
+      border-color: var(--borde-fuerte);
+      box-shadow: var(--sombra-fuerte);
+    }
+
+    .producto__foto {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      border-radius: 0.78rem;
+      background: var(--fondo-rosa);
+      cursor: zoom-in;
+    }
+
+    .producto__foto::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, transparent 55%, rgba(50, 8, 23, 0.2));
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+
+    .producto__foto img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .producto:hover .producto__foto img,
+    .producto__foto:focus-visible img {
+      transform: scale(1.045);
+    }
+
+    .producto:hover .producto__foto::after,
+    .producto__foto:focus-visible::after {
+      opacity: 1;
+    }
+
+    .producto__lupa {
+      position: absolute;
+      right: 0.7rem;
+      bottom: 0.7rem;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      background: rgba(255, 249, 247, 0.92);
+      color: #7C1832;
+      box-shadow: 0 4px 14px rgba(40, 5, 17, 0.15);
+      transform: translateY(0.25rem);
+      opacity: 0;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .producto__lupa .icono {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .producto:hover .producto__lupa,
+    .producto__foto:focus-visible .producto__lupa {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .producto__cuerpo {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 0.8rem;
+      padding: 1.05rem 0.6rem 0.25rem;
+    }
+
+    .producto__nombre {
+      display: flex;
+      align-items: baseline;
+      gap: 0.65rem;
+    }
+
+    .producto__numero {
+      color: var(--oro-texto);
+      font-family: var(--fuente-texto);
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+    }
+
+    .producto h3 {
+      font-size: clamp(1.4rem, 2.2vw, 1.78rem);
+      line-height: 1.15;
+    }
+
+    .producto .btn {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .catalogo__nota {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      max-width: 41rem;
+      margin: 2.5rem auto 0;
+      padding: 1.4rem 1rem;
+      border-top: 1px solid var(--borde);
+      border-bottom: 1px solid var(--borde);
+      color: var(--texto-suave);
+      font-size: 0.92rem;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .catalogo__nota p {
+      margin: 0;
+    }
+
+    .catalogo__nota a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--vino);
+      font-weight: 500;
+      text-decoration-color: var(--rosa);
+      text-decoration-thickness: 1px;
+    }
+
+    .catalogo__nota a:hover {
+      text-decoration-color: var(--vino);
+    }
+
+    /* ==========================================================
+       7. DESTACADOS
+       ========================================================== */
+    .seccion--vino {
+      background:
+        radial-gradient(circle at 10% 7%, rgba(244, 182, 194, 0.19), transparent 31%),
+        radial-gradient(circle at 92% 84%, rgba(201, 166, 107, 0.14), transparent 28%),
+        linear-gradient(135deg, #4A0E22 0%, #7A1633 54%, #4E0E24 100%);
+      color: #FFF9F7;
+    }
+
+    .seccion--vino::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255, 249, 247, 0.24) 0.5px, transparent 0.5px);
+      background-size: 1.35rem 1.35rem;
+      opacity: 0.28;
+    }
+
+    .seccion--vino .eyebrow {
+      color: #F4B6C2;
+    }
+
+    .seccion--vino .seccion__intro {
+      color: rgba(255, 249, 247, 0.76);
+    }
+
+    .seccion--vino h2 {
+      color: #FFF9F7;
+    }
+
+    .destacados__adorno {
+      position: absolute;
+      top: 18%;
+      right: -4rem;
+      width: clamp(11rem, 22vw, 21rem);
+      color: #F4B6C2;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .carrusel {
+      position: relative;
+      z-index: 1;
+    }
+
+    .carrusel__viewport {
+      overflow: hidden;
+      padding: 0.35rem 0.1rem 0.7rem;
+      margin: -0.35rem -0.1rem -0.7rem;
+    }
+
+    .carrusel__pista {
+      display: flex;
+      gap: clamp(1rem, 2vw, 1.35rem);
+      transition: transform 0.62s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+    }
+
+    .destacado {
+      display: flex;
+      flex: 0 0 100%;
+      flex-direction: column;
+      min-width: 0;
+      padding: 0.55rem 0.55rem 1.1rem;
+      border: 1px solid rgba(201, 166, 107, 0.42);
+      border-radius: 1.1rem;
+      background: #FFF9F7;
+      color: #3A2A2E;
+      box-shadow: 0 14px 38px rgba(36, 4, 15, 0.23);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .destacado:hover {
+      transform: translateY(-0.35rem);
+      box-shadow: 0 22px 48px rgba(36, 4, 15, 0.3);
+    }
+
+    .destacado__foto {
+      overflow: hidden;
+      border-radius: 0.78rem;
+      background: #F9E7EA;
+    }
+
+    .destacado__foto img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .destacado:hover .destacado__foto img {
+      transform: scale(1.04);
+    }
+
+    .destacado__cuerpo {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 0.85rem;
+      padding: 1rem 0.55rem 0;
+    }
+
+    .destacado__cuerpo h3 {
+      color: #8B1A3A;
+      font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+    }
+
+    .destacado .btn {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    /* Controles compartidos de carrusel */
+    .carrusel__controles {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-top: 1.35rem;
+    }
+
+    .carrusel__flecha {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.7rem;
+      height: 2.7rem;
+      padding: 0;
+      border: 1px solid rgba(255, 249, 247, 0.35);
+      border-radius: 50%;
+      background: transparent;
+      color: #FFF9F7;
+      cursor: pointer;
+      transition: background-color 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+    }
+
+    .carrusel__flecha:hover {
+      background: #FFF9F7;
+      border-color: #FFF9F7;
+      color: #7A1633;
+      transform: translateY(-1px);
+    }
+
+    .carrusel__flecha .icono {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .carrusel__contador {
+      min-width: 4.25rem;
+      margin: 0;
+      color: rgba(255, 249, 247, 0.7);
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.13em;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .carrusel__puntos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.1rem;
+      margin-top: 0.65rem;
+    }
+
+    .punto {
+      display: grid;
+      place-items: center;
+      width: 1.6rem;
+      height: 1.6rem;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .punto::before {
+      content: "";
+      width: 0.35rem;
+      height: 0.35rem;
+      border-radius: 50%;
+      background: rgba(255, 249, 247, 0.45);
+      transition: width 0.25s ease, background-color 0.25s ease, border-radius 0.25s ease;
+    }
+
+    .punto:hover::before {
+      background: rgba(255, 249, 247, 0.85);
+    }
+
+    .punto[aria-current="true"]::before {
+      width: 1.1rem;
+      border-radius: 999px;
+      background: #F4B6C2;
+    }
+
+    /* ==========================================================
+       8. SOBRE LA PERSONA Y SOBRE LA EMPRESA
+       ========================================================== */
+    .seccion--persona {
+      background:
+        radial-gradient(circle at 90% 35%, rgba(244, 182, 194, 0.2), transparent 27%),
+        var(--fondo);
+    }
+
+    .seccion--empresa {
+      background:
+        radial-gradient(circle at 8% 80%, rgba(201, 166, 107, 0.12), transparent 27%),
+        linear-gradient(160deg, var(--fondo-alt), var(--fondo));
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      gap: clamp(2.25rem, 5vw, 4.75rem);
+    }
+
+    .split__texto h2 {
+      margin-bottom: 1.25rem;
+    }
+
+    .split__texto p {
+      margin: 0;
+      color: var(--texto-suave);
+      font-size: clamp(0.97rem, 1.35vw, 1.07rem);
+      line-height: 1.9;
+    }
+
+    .split__texto .eyebrow {
+      margin-bottom: 1rem;
+    }
+
+    .media-enmarcada {
+      position: relative;
+      width: min(100%, 25rem);
+      margin-inline: auto;
+      isolation: isolate;
+    }
+
+    .media-enmarcada::before {
+      content: "";
+      position: absolute;
+      inset: 1.1rem -1.1rem -1.1rem 1.1rem;
+      z-index: -1;
+      border: 1px solid var(--oro);
+      border-radius: 1.35rem;
+      opacity: 0.72;
+    }
+
+    .media-enmarcada::after {
+      content: "";
+      position: absolute;
+      z-index: -2;
+      inset: 15% 8% -10%;
+      background: radial-gradient(ellipse, rgba(244, 182, 194, 0.48), transparent 68%);
+      filter: blur(2rem);
+      pointer-events: none;
+    }
+
+    .media-enmarcada img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border: 1px solid var(--borde-fuerte);
+      border-radius: 1.2rem;
+      background: #FFFDFC;
+      box-shadow: var(--sombra-fuerte);
+    }
+
+    .media-enmarcada--logo img {
+      object-fit: cover;
+      padding: 0;
+    }
+
+    .media-enmarcada figcaption {
+      margin-top: 1.55rem;
+      color: var(--texto-suave);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.17em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================
+       9. ENVÍOS Y DEVOLUCIONES
+       ========================================================== */
+    .seccion--envios {
+      background:
+        radial-gradient(circle at 4% 12%, rgba(244, 182, 194, 0.24), transparent 25%),
+        linear-gradient(180deg, var(--fondo-rosa), var(--fondo));
+    }
+
+    .envios__panel {
+      display: grid;
+      grid-template-columns: 1fr;
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      border-radius: 1.25rem;
+      background: var(--superficie);
+      box-shadow: var(--sombra);
+    }
+
+    .envios__contenido {
+      padding: clamp(1.6rem, 4vw, 3.25rem);
+    }
+
+    .envios__contenido p {
+      margin: 0;
+      color: var(--texto-suave);
+      font-size: clamp(0.94rem, 1.3vw, 1.02rem);
+      line-height: 1.9;
+    }
+
+    .envios__contenido .btn {
+      margin-top: 1.6rem;
+    }
+
+    .envios__iconos {
+      display: grid;
+      align-content: center;
+      gap: 0;
+      padding: 0 clamp(1.3rem, 3.5vw, 2.4rem);
+      background:
+        radial-gradient(circle at 90% 15%, rgba(244, 182, 194, 0.18), transparent 30%),
+        linear-gradient(150deg, var(--fondo-rosa), var(--fondo-alt));
+      border-top: 1px solid var(--borde);
+    }
+
+    .envio-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.95rem;
+      align-items: start;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .envio-item:last-child {
+      border-bottom: 0;
+    }
+
+    .envio-item__icono {
+      display: grid;
+      place-items: center;
+      width: 2.35rem;
+      height: 2.35rem;
+      border: 1px solid var(--borde-fuerte);
+      border-radius: 50%;
+      background: var(--superficie);
+      color: var(--vino);
+    }
+
+    .envio-item__icono .icono {
+      width: 1.05rem;
+      height: 1.05rem;
+    }
+
+    .envio-item h3 {
+      margin: 0 0 0.15rem;
+      font-family: var(--fuente-texto);
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 0.03em;
+      color: var(--titulo);
+    }
+
+    .envio-item p {
+      margin: 0;
+      color: var(--texto-suave);
+      font-size: 0.79rem;
+      line-height: 1.65;
+    }
+
+    .etiqueta-pago {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.35rem;
+      padding: 0.25rem 0.52rem;
+      border: 1px solid var(--borde);
+      border-radius: 999px;
+      color: var(--vino);
+      font-size: 0.63rem;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .etiqueta-pago .icono {
+      width: 0.72rem;
+      height: 0.72rem;
+    }
+
+    /* ==========================================================
+       10. PREGUNTAS FRECUENTES
+       ========================================================== */
+    .seccion--faq {
+      background:
+        radial-gradient(circle at 96% 25%, rgba(201, 166, 107, 0.09), transparent 22%),
+        var(--fondo);
+    }
+
+    .faq__layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(2rem, 5vw, 4.75rem);
+      align-items: start;
+    }
+
+    .faq__acordeon {
+      border-top: 1px solid var(--borde-fuerte);
+    }
+
+    .faq__item {
+      border-bottom: 1px solid var(--borde-fuerte);
+    }
+
+    .faq__pregunta {
+      margin: 0;
+      font-family: var(--fuente-texto);
+      font-size: inherit;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+
+    .faq__boton {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 1.2rem;
+      padding: 1.2rem 0.15rem;
+      border: 0;
+      background: transparent;
+      color: var(--titulo);
+      font-family: var(--fuente-texto);
+      font-size: clamp(0.9rem, 1.3vw, 0.99rem);
+      font-weight: 500;
+      line-height: 1.5;
+      text-align: left;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .faq__boton:hover {
+      color: var(--vino-oscuro);
+    }
+
+    .faq__icono {
+      display: grid;
+      place-items: center;
+      width: 1.9rem;
+      height: 1.9rem;
+      flex: none;
+      border: 1px solid var(--borde-fuerte);
+      border-radius: 50%;
+      color: var(--vino);
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .faq__icono .icono {
+      width: 0.8rem;
+      height: 0.8rem;
+      transition: transform 0.28s ease;
+    }
+
+    .faq__boton[aria-expanded="true"] .faq__icono {
+      border-color: var(--vino);
+      background: var(--vino);
+      color: #FFF9F7;
+    }
+
+    .faq__boton[aria-expanded="true"] .faq__icono .icono {
+      transform: rotate(45deg);
+    }
+
+    .faq__respuesta {
+      display: grid;
+      grid-template-rows: 0fr;
+      opacity: 0;
+      transition: grid-template-rows 0.35s ease, opacity 0.3s ease;
+    }
+
+    .faq__respuesta.is-open {
+      grid-template-rows: 1fr;
+      opacity: 1;
+    }
+
+    .faq__respuesta-interior {
+      overflow: hidden;
+    }
+
+    .faq__respuesta p {
+      max-width: 42rem;
+      margin: 0;
+      padding: 0 2.6rem 1.35rem 0.15rem;
+      color: var(--texto-suave);
+      font-size: 0.9rem;
+      line-height: 1.85;
+    }
+
+    .faq__apoyo {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      margin-top: 2rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--borde);
+      color: var(--texto-suave);
+      font-size: 0.8rem;
+      line-height: 1.7;
+    }
+
+    .faq__apoyo .icono {
+      width: 1rem;
+      height: 1rem;
+      margin-top: 0.25rem;
+      color: var(--oro);
+    }
+
+    .faq__apoyo a {
+      color: var(--vino);
+      text-decoration-color: var(--rosa);
+      font-weight: 500;
+    }
+
+    /* ==========================================================
+       11. OPINIONES
+       ========================================================== */
+    .seccion--opiniones {
+      background:
+        radial-gradient(circle at 84% 15%, rgba(244, 182, 194, 0.17), transparent 26%),
+        radial-gradient(circle at 10% 85%, rgba(201, 166, 107, 0.12), transparent 28%),
+        linear-gradient(145deg, #3F0B1D 0%, #6D142E 55%, #460E22 100%);
+      color: #FFF9F7;
+    }
+
+    .seccion--opiniones::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255, 249, 247, 0.22) 0.5px, transparent 0.5px);
+      background-size: 1.4rem 1.4rem;
+      opacity: 0.24;
+    }
+
+    .seccion--opiniones .eyebrow {
+      color: #F4B6C2;
+    }
+
+    .seccion--opiniones h2 {
+      color: #FFF9F7;
+    }
+
+    .opiniones__carrusel {
+      max-width: 58rem;
+      margin-inline: auto;
+    }
+
+    .testimonio {
+      flex: 0 0 100%;
+      min-width: 0;
+      margin: 0;
+      padding: clamp(1.7rem, 4.3vw, 3.2rem);
+      border: 1px solid rgba(201, 166, 107, 0.35);
+      border-radius: 1.25rem;
+      background: rgba(255, 249, 247, 0.98);
+      color: #3A2A2E;
+      box-shadow: 0 18px 45px rgba(30, 4, 13, 0.25);
+      text-align: center;
+    }
+
+    .testimonio__comilla {
+      display: block;
+      height: 2.15rem;
+      margin-bottom: 0.6rem;
+      color: #C9A66B;
+      font-family: var(--fuente-titulos);
+      font-size: 5.2rem;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .testimonio__texto {
+      max-width: 48rem;
+      margin: 0 auto;
+      color: #433034;
+      font-size: clamp(0.94rem, 1.45vw, 1.08rem);
+      font-weight: 300;
+      line-height: 1.9;
+      text-wrap: pretty;
+    }
+
+    .testimonio__autor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+      color: #7A1633;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+
+    .testimonio__iniciales {
+      display: grid;
+      place-items: center;
+      width: 2.45rem;
+      height: 2.45rem;
+      flex: none;
+      border: 1px solid rgba(139, 26, 58, 0.2);
+      border-radius: 50%;
+      background: #F9E7EA;
+      color: #7A1633;
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .seccion--opiniones .carrusel__puntos {
+      margin-top: 1rem;
+    }
+
+    .seccion--opiniones .carrusel__controles {
+      margin-top: 0.8rem;
+    }
+
+    .opiniones__nota {
+      margin: 1.3rem 0 0;
+      color: rgba(255, 249, 247, 0.55);
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      text-align: center;
+    }
+
+    /* ==========================================================
+       12. SIGNIFICADO DE LOS AMULETOS
+       ========================================================== */
+    .seccion--significados {
+      background:
+        radial-gradient(circle at 95% 90%, rgba(244, 182, 194, 0.2), transparent 26%),
+        var(--fondo-alt);
+    }
+
+    .significados__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .significado {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 1.35rem 1.2rem;
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      border-radius: 1rem;
+      background: var(--superficie);
+      box-shadow: 0 8px 24px rgba(81, 29, 43, 0.045);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .significado:hover {
+      transform: translateY(-0.3rem);
+      border-color: var(--borde-fuerte);
+      box-shadow: var(--sombra);
+    }
+
+    .significado::after {
+      content: "";
+      position: absolute;
+      right: -1.9rem;
+      bottom: -2rem;
+      width: 5rem;
+      height: 5rem;
+      border: 1px solid var(--borde);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .significado__icono {
+      display: grid;
+      place-items: center;
+      width: 2.55rem;
+      height: 2.55rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--borde-fuerte);
+      border-radius: 50%;
+      background: var(--fondo-rosa);
+      color: var(--vino);
+    }
+
+    .significado__icono .icono {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .significado h3 {
+      margin-bottom: 0.4rem;
+      font-size: clamp(1.3rem, 1.9vw, 1.55rem);
+      line-height: 1.2;
+    }
+
+    .significado p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: var(--texto-suave);
+      font-size: 0.8rem;
+      line-height: 1.7;
+    }
+
+    .significados__aviso {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0.6rem;
+      max-width: 48rem;
+      margin: 2rem auto 0;
+      color: var(--texto-suave);
+      font-size: 0.76rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .significados__aviso .icono {
+      width: 0.9rem;
+      height: 0.9rem;
+      margin-top: 0.25rem;
+      flex: none;
+      color: var(--oro);
+    }
+
+    .significados__accion {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    /* ==========================================================
+       13. CUIDADO DE LAS PIEZAS
+       ========================================================== */
+    .seccion--cuidado {
+      background:
+        radial-gradient(circle at 12% 22%, rgba(244, 182, 194, 0.25), transparent 27%),
+        linear-gradient(180deg, var(--fondo-rosa), var(--fondo));
+    }
+
+    .cuidado__panel {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+      padding: clamp(1.6rem, 4vw, 3.4rem);
+      border: 1px solid var(--borde);
+      border-radius: 1.25rem;
+      background: var(--superficie);
+      box-shadow: var(--sombra);
+    }
+
+    .cuidado__intro {
+      position: relative;
+    }
+
+    .cuidado__intro .adorno-loto {
+      position: relative;
+      width: 3rem;
+      height: 3rem;
+      margin-bottom: 1.2rem;
+      color: var(--oro);
+      opacity: 0.8;
+    }
+
+    .cuidado__intro h2 {
+      margin-bottom: 0.9rem;
+    }
+
+    .cuidado__intro p {
+      max-width: 28rem;
+      margin: 0;
+      color: var(--texto-suave);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .cuidado__lista {
+      display: grid;
+      gap: 0;
+      list-style: none;
+    }
+
+    .cuidado__lista li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.95rem;
+      align-items: start;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .cuidado__lista li:first-child {
+      padding-top: 0;
+    }
+
+    .cuidado__lista li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .cuidado__icono {
+      display: grid;
+      place-items: center;
+      width: 2.15rem;
+      height: 2.15rem;
+      border: 1px solid var(--borde);
+      border-radius: 50%;
+      background: var(--fondo-rosa);
+      color: var(--vino);
+    }
+
+    .cuidado__icono .icono {
+      width: 0.95rem;
+      height: 0.95rem;
+    }
+
+    .cuidado__lista p {
+      margin: 0;
+      color: var(--texto-suave);
+      font-size: 0.84rem;
+      line-height: 1.7;
+    }
+
+    /* ==========================================================
+       14. CONTACTO
+       ========================================================== */
+    .seccion--contacto {
+      padding-block: clamp(4.5rem, 9vw, 8rem);
+      background:
+        radial-gradient(circle at 50% 34%, rgba(244, 182, 194, 0.2), transparent 35%),
+        linear-gradient(150deg, #4A0E22 0%, #821A38 55%, #541027 100%);
+      color: #FFF9F7;
+      text-align: center;
+    }
+
+    .seccion--contacto::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255, 249, 247, 0.22) 0.5px, transparent 0.5px);
+      background-size: 1.2rem 1.2rem;
+      opacity: 0.25;
+    }
+
+    .seccion--contacto .eyebrow {
+      color: #F4B6C2;
+    }
+
+    .seccion--contacto h2 {
+      max-width: 48rem;
+      margin-inline: auto;
+      color: #FFF9F7;
+      font-size: clamp(3rem, 6vw, 5.6rem);
+    }
+
+    .contacto__texto {
+      max-width: 35rem;
+      margin: 1.25rem auto 0;
+      color: rgba(255, 249, 247, 0.78);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .contacto__principal {
+      margin-top: 1.9rem;
+    }
+
+    .contacto__datos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem 1.8rem;
+      margin-top: 1.85rem;
+    }
+
+    .contacto__dato {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      color: #FFF9F7;
+      font-size: 0.86rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contacto__dato:hover {
+      color: #F4B6C2;
+    }
+
+    .contacto__dato .icono {
+      width: 1rem;
+      height: 1rem;
+      color: #C9A66B;
+    }
+
+    .contacto__nota {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin: 1.6rem 0 0;
+      padding: 0.35rem 0.7rem;
+      border: 1px solid rgba(255, 249, 247, 0.2);
+      border-radius: 999px;
+      color: rgba(255, 249, 247, 0.7);
+      font-size: 0.66rem;
+      letter-spacing: 0.04em;
+    }
+
+    .contacto__nota .icono {
+      width: 0.78rem;
+      height: 0.78rem;
+      color: #C9A66B;
+    }
+
+    .contacto__lugar {
+      margin: 1.35rem 0 0;
+      color: rgba(255, 249, 247, 0.76);
+      font-size: 0.64rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .contacto__loto {
+      position: absolute;
+      left: 50%;
+      bottom: -12rem;
+      width: min(65vw, 38rem);
+      color: #F4B6C2;
+      opacity: 0.06;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    /* ==========================================================
+       15. PIE DE PÁGINA
+       ========================================================== */
+    .pie {
+      position: relative;
+      padding-block: clamp(2.8rem, 5vw, 4.5rem) clamp(4.75rem, 8vw, 6rem);
+      overflow: hidden;
+      background: #2B0A16;
+      color: #EEDBDD;
+    }
+
+    .pie::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(244, 182, 194, 0.16) 0.5px, transparent 0.5px);
+      background-size: 1.4rem 1.4rem;
+      opacity: 0.35;
+    }
+
+    .pie__grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.2rem;
+    }
+
+    .pie__marca {
+      display: grid;
+      gap: 0.9rem;
+      align-content: start;
+    }
+
+    .pie__marca .marca {
+      align-items: center;
+    }
+
+    .pie__logo {
+      border-color: rgba(255, 249, 247, 0.2);
+      box-shadow: none;
+    }
+
+    .pie__marca .marca__nombre {
+      color: #FFF9F7;
+    }
+
+    .pie__marca .marca__lema {
+      display: none;
+    }
+
+    .pie__slogan {
+      margin: 0.2rem 0 0;
+      color: #F4B6C2;
+      font-family: var(--fuente-titulos);
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.3;
+    }
+
+    .pie__lugar {
+      margin: 0;
+      color: rgba(255, 249, 247, 0.5);
+      font-size: 0.67rem;
+      letter-spacing: 0.08em;
+    }
+
+    .pie__titulo {
+      margin: 0 0 0.9rem;
+      color: #FFF9F7;
+      font-family: var(--fuente-texto);
+      font-size: 0.63rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .pie__nav ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.3rem 1.3rem;
+      list-style: none;
+    }
+
+    .pie__nav a,
+    .pie__contacto a {
+      color: rgba(255, 249, 247, 0.7);
+      font-size: 0.76rem;
+      line-height: 1.6;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .pie__nav a:hover,
+    .pie__contacto a:hover {
+      color: #F4B6C2;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    .pie__contacto {
+      display: grid;
+      align-content: start;
+      gap: 0.35rem;
+    }
+
+    .pie__contacto a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .pie__contacto .icono {
+      width: 0.85rem;
+      height: 0.85rem;
+      color: #C9A66B;
+    }
+
+    .pie__pago {
+      margin: 0.55rem 0 0;
+      color: rgba(255, 249, 247, 0.48);
+      font-size: 0.63rem;
+      letter-spacing: 0.04em;
+    }
+
+    .pie__base {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem 1.5rem;
+      margin-top: 2.4rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid rgba(255, 249, 247, 0.13);
+      color: rgba(255, 249, 247, 0.62);
+      font-size: 0.65rem;
+      line-height: 1.6;
+    }
+
+    .pie__base p {
+      margin: 0;
+    }
+
+    /* ==========================================================
+       16. WHATSAPP FLOTANTE
+       ========================================================== */
+    .whatsapp-flotante {
+      position: fixed;
+      right: max(1rem, env(safe-area-inset-right));
+      bottom: max(1rem, env(safe-area-inset-bottom));
+      z-index: 80;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.55rem;
+      height: 3.55rem;
+      border: 1px solid rgba(255, 249, 247, 0.4);
+      border-radius: 50%;
+      background: var(--vino);
+      color: #FFF9F7;
+      box-shadow: 0 10px 28px rgba(61, 10, 25, 0.3), 0 0 0 0.3rem rgba(244, 182, 194, 0.12);
+      text-decoration: none;
+      transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .whatsapp-flotante:hover {
+      transform: translateY(-0.25rem);
+      background: var(--vino-oscuro);
+      box-shadow: 0 16px 34px rgba(61, 10, 25, 0.36), 0 0 0 0.4rem rgba(244, 182, 194, 0.16);
+    }
+
+    .whatsapp-flotante .icono {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .whatsapp-flotante::after {
+      content: "Escríbenos por WhatsApp";
+      position: absolute;
+      right: calc(100% + 0.7rem);
+      top: 50%;
+      width: max-content;
+      max-width: 12rem;
+      padding: 0.45rem 0.65rem;
+      border: 1px solid var(--borde);
+      border-radius: 0.45rem;
+      background: var(--superficie-fuerte);
+      color: var(--texto);
+      font-size: 0.68rem;
+      line-height: 1.4;
+      box-shadow: var(--sombra);
+      opacity: 0;
+      transform: translateY(-50%) translateX(0.35rem);
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .whatsapp-flotante:hover::after,
+    .whatsapp-flotante:focus-visible::after {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    }
+
+    /* ==========================================================
+       17. VISOR DE IMÁGENES
+       ========================================================== */
+    .visor {
+      width: min(92vw, 64rem);
+      max-height: 92dvh;
+      padding: 0;
+      overflow: visible;
+      border: 0;
+      background: transparent;
+      color: #FFF9F7;
+    }
+
+    .visor::backdrop {
+      background: rgba(28, 5, 13, 0.9);
+      backdrop-filter: blur(8px);
+    }
+
+    .visor__marco {
+      position: relative;
+      display: grid;
+      gap: 0.9rem;
+      justify-items: center;
+      padding: clamp(0.8rem, 2.5vw, 1.5rem);
+      border: 1px solid rgba(255, 249, 247, 0.22);
+      border-radius: 1.1rem;
+      background: #211016;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+    }
+
+    .visor__figura {
+      display: grid;
+      justify-items: center;
+      gap: 0.7rem;
+      width: 100%;
+      margin: 0;
+    }
+
+    .visor__imagen {
+      width: auto;
+      max-width: min(100%, 52rem);
+      max-height: calc(92dvh - 9.5rem);
+      aspect-ratio: 1;
+      object-fit: contain;
+      border-radius: 0.6rem;
+      background: #F9E7EA;
+    }
+
+    .visor__leyenda {
+      margin: 0;
+      color: #F4DDE2;
+      font-family: var(--fuente-titulos);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .visor__contador {
+      margin: 0;
+      color: rgba(255, 249, 247, 0.58);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .visor__cerrar,
+    .visor__nav {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.7rem;
+      height: 2.7rem;
+      padding: 0;
+      border: 1px solid rgba(255, 249, 247, 0.28);
+      border-radius: 50%;
+      background: rgba(42, 11, 22, 0.7);
+      color: #FFF9F7;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .visor__cerrar:hover,
+    .visor__nav:hover {
+      background: #FFF9F7;
+      border-color: #FFF9F7;
+      color: #6D142E;
+    }
+
+    .visor__cerrar {
+      position: absolute;
+      top: 0.7rem;
+      right: 0.7rem;
+      z-index: 2;
+    }
+
+    .visor__controles {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .visor__cerrar .icono,
+    .visor__nav .icono {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    [data-tema="oscuro"] .visor {
+      color: #FFF9F7;
+    }
+
+    /* ==========================================================
+       18. RESPONSIVE
+       ========================================================== */
+    @media (min-width: 36rem) {
+      .significados__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .menu-movil__lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 1.1rem;
+      }
+
+      .menu-movil__lista a {
+        font-size: 1.35rem;
+      }
+    }
+
+    @media (min-width: 40rem) {
+      .carrusel--productos .destacado {
+        flex-basis: calc((100% - clamp(1rem, 2vw, 1.35rem)) / 2);
+      }
+
+      .productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .envios__iconos {
+        padding-block: 1.1rem;
+      }
+
+      .envios__panel {
+        grid-template-columns: 1.08fr 0.92fr;
+      }
+
+      .envios__iconos {
+        border-top: 0;
+        border-left: 1px solid var(--borde);
+      }
+
+      .pie__grid {
+        grid-template-columns: 1.1fr 1fr;
+      }
+    }
+
+    @media (min-width: 48rem) {
+      .catalogo__sello {
+        display: inline-flex;
+      }
+
+      .pilares {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pilar--destacado {
+        grid-column: 1 / -1;
+      }
+
+      .cuidado__panel {
+        grid-template-columns: 0.82fr 1.18fr;
+      }
+
+      .pie__grid {
+        grid-template-columns: 1.2fr 1fr 0.72fr;
+      }
+
+      .pie__base {
+        margin-top: 3rem;
+      }
+    }
+
+    @media (min-width: 57.5rem) {
+      .pilares {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .pilar--destacado {
+        grid-column: auto;
+      }
+
+      .split {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .split--invertida .split__texto {
+        order: 2;
+      }
+
+      .split--invertida .split__media {
+        order: 1;
+      }
+
+      .faq__layout {
+        grid-template-columns: 0.78fr 1.22fr;
+      }
+    }
+
+    @media (min-width: 64rem) {
+      .productos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .carrusel--productos .destacado {
+        flex-basis: calc((100% - (2 * clamp(1rem, 2vw, 1.35rem))) / 3);
+      }
+
+      .significados__grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .significado {
+        padding: 1.35rem 1rem;
+      }
+
+      .significado p {
+        font-size: 0.77rem;
+      }
+    }
+
+    @media (max-width: 69.99rem) {
+      .navegacion {
+        display: none;
+      }
+
+      .boton-menu {
+        display: inline-flex;
+      }
+    }
+
+    /* En escritorio se muestra la navegación completa y se oculta el
+       menú desplegable. Así se evita el conflicto entre 920 y 1119 px. */
+    @media (min-width: 70rem) {
+      .navegacion {
+        display: flex;
+      }
+
+      .boton-menu {
+        display: none;
+      }
+
+      .menu-movil {
+        display: none;
+      }
+    }
+
+    @media (max-width: 47.99rem) {
+      .encabezado__cta {
+        display: none;
+      }
+
+      .portada {
+        min-height: max(37rem, calc(100svh - var(--alto-encabezado)));
+      }
+
+      .portada__scroll {
+        display: none;
+      }
+    }
+
+    @media (max-width: 34.99rem) {
+      :root {
+        --alto-encabezado: 4.15rem;
+      }
+
+      .marca__logo {
+        width: 2.6rem;
+      }
+
+      .marca__nombre {
+        font-size: 1.17rem;
+      }
+
+      .marca__lema {
+        display: none;
+      }
+
+      .boton-tema,
+      .boton-menu {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      .encabezado__barra {
+        gap: 0.6rem;
+      }
+
+      .portada__acciones {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 20rem;
+        margin-inline: auto;
+      }
+
+      .portada__acciones .btn {
+        width: 100%;
+        min-height: 3.2rem;
+        padding-inline: 1.1rem;
+        font-size: 0.82rem;
+        white-space: nowrap;
+      }
+
+      .portada__sellos {
+        gap: 0.5rem 0.8rem;
+        font-size: 0.61rem;
+      }
+
+      .portada__destello--1 {
+        left: 5%;
+      }
+
+      .portada__destello--2 {
+        right: 7%;
+      }
+
+      .pie__nav ul {
+        grid-template-columns: 1fr;
+      }
+
+      .contacto__datos {
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      .whatsapp-flotante {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+
+      .whatsapp-flotante .icono {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+    }
+
+    /* En pantallas muy estrechas, los significados pasan a una columna
+       para conservar la legibilidad de cada tarjeta. */
+    @media (max-width: 22.49rem) {
+      .significados__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .whatsapp-flotante {
+        right: max(0.625rem, env(safe-area-inset-right));
+        bottom: max(0.625rem, env(safe-area-inset-bottom));
+        width: 2.75rem;
+        height: 2.75rem;
+      }
+
+      .whatsapp-flotante .icono {
+        width: 1.15rem;
+        height: 1.15rem;
+      }
+    }
+
+    /* ==========================================================
+       19. MOVIMIENTO REDUCIDO Y PREFERENCIAS
+       ========================================================== */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .js .revelar {
+        opacity: 1;
+        transform: none;
+      }
+
+      .portada__decoracion,
+      .portada__destello {
+        animation: none;
+      }
+
+      .carrusel__pista {
+        transition: none;
+      }
+    }
+
+    @media (forced-colors: active) {
+      .btn,
+      .boton-tema,
+      .boton-menu,
+      .carrusel__flecha,
+      .faq__icono {
+        border: 1px solid ButtonText;
+      }
+
+      .producto__lupa {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- Contenido enriquecido para buscadores.
+       Los productos no incluyen precios ni ofertas. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://[POR DEFINIR]/#organizacion",
+        "name": "Amuletos de Luz",
+        "slogan": "Diseñamos Accesorios con Propósito",
+        "description": "Joyería artesanal con intención, hecha con piedras naturales y materiales de alta durabilidad.",
+        "url": "https://[POR DEFINIR]/",
+        "logo": "https://[POR DEFINIR]/img/logo.jpg",
+        "founder": {
+          "@type": "Person",
+          "name": "Thanit Angélica Fernández Hernández"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Colombia"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+57 322 441 65 70",
+          "contactType": "atención al cliente",
+          "availableLanguage": "es"
+        },
+        "sameAs": [
+          "https://www.instagram.com/amuletos_de_luz/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://[POR DEFINIR]/#sitio",
+        "url": "https://[POR DEFINIR]/",
+        "name": "Amuletos de Luz",
+        "inLanguage": "es-CO",
+        "publisher": {
+          "@id": "https://[POR DEFINIR]/#organizacion"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://[POR DEFINIR]/#catalogo",
+        "name": "Catálogo de Amuletos de Luz",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Product",
+              "name": "Cielo Profundo",
+              "image": "https://[POR DEFINIR]/img/producto1.jpg",
+              "description": "Pulsera doble de piedras azules irregulares con dije dorado en forma de corazón.",
+              "brand": { "@type": "Brand", "name": "Amuletos de Luz" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Product",
+              "name": "Raíz y Fuerza",
+              "image": "https://[POR DEFINIR]/img/producto2.jpg",
+              "description": "Pulsera de piedra volcánica negra con dije plateado de árbol.",
+              "brand": { "@type": "Brand", "name": "Amuletos de Luz" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Product",
+              "name": "Noche Azul",
+              "image": "https://[POR DEFINIR]/img/producto3.jpg",
+              "description": "Pulsera de esferas oscuras con destellos azules y separadores plateados.",
+              "brand": { "@type": "Brand", "name": "Amuletos de Luz" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Product",
+              "name": "Arcoíris de Luz",
+              "image": "https://[POR DEFINIR]/img/producto4.jpg",
+              "description": "Dos pulseras negras con piedras de colores.",
+              "brand": { "@type": "Brand", "name": "Amuletos de Luz" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "Product",
+              "name": "Verde Esperanza",
+              "image": "https://[POR DEFINIR]/img/producto5.jpg",
+              "description": "Dos pulseras de piedras verdes con dije dorado en forma de corazón.",
+              "brand": { "@type": "Brand", "name": "Amuletos de Luz" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "Product",
+              "name": "Estrella de Regalo",
+              "image": "https://[POR DEFINIR]/img/producto6.jpg",
+              "description": "Dos pulseras verdes con estrella blanca, en sobres rosados con puntos blancos.",
+              "brand": { "@type": "Brand", "name": "Amuletos de Luz" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "Product",
+              "name": "Decena Protectora",
+              "image": "https://[POR DEFINIR]/img/producto7.jpg",
+              "description": "Decenas de madera con cordón rojo y medallas plateadas.",
+              "brand": { "@type": "Brand", "name": "Amuletos de Luz" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "Product",
+              "name": "Armonía de Piedras",
+              "image": "https://[POR DEFINIR]/img/producto8.jpg",
+              "description": "Pila de pulseras de varias piedras con dijes dorados.",
+              "brand": { "@type": "Brand", "name": "Amuletos de Luz" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+              "@type": "Product",
+              "name": "Sol y Turquesa",
+              "image": "https://[POR DEFINIR]/img/producto9.jpg",
+              "description": "Pulseras rojas y turquesa con ojos turcos y dijes dorados de sol, estrella y mano.",
+              "brand": { "@type": "Brand", "name": "Amuletos de Luz" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+              "@type": "Product",
+              "name": "Dúo Mano de Fátima",
+              "image": "https://[POR DEFINIR]/img/producto10.jpg",
+              "description": "Dos pulseras, negra y ojo de tigre, con mano de Fátima blanca.",
+              "brand": { "@type": "Brand", "name": "Amuletos de Luz" }
+            }
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://[POR DEFINIR]/#preguntas-frecuentes",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿De qué están hechas las piezas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "De acero inoxidable, zamak italiano con baño de rodio, hilos de alta resistencia y piedras naturales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Se pueden mojar o usar con perfume?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Los metales y el ensamblaje resisten el agua dulce, el sudor y las fragancias comunes. Las piezas son hipoalergénicas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Tienen garantía?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, 12 meses sobre metales y ensamblaje, bajo uso normal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo hago un pedido?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Escríbenos por WhatsApp y te asesoramos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo puedo pagar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El medio de pago se coordina por WhatsApp al hacer tu pedido."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto cuestan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Los precios se consultan por WhatsApp."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Me ayudan a elegir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, te asesoramos según la intención que busques."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hacen envíos a mi ciudad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Enviamos a gran parte de Colombia. Consúltanos por WhatsApp."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Saltar al contenido</a>
+
+  <noscript>
+    <style>
+      .js .revelar { opacity: 1; transform: none; }
+      .carrusel__viewport { overflow: visible; }
+      .carrusel__pista { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+      .carrusel__controles, .carrusel__puntos { display: none; }
+      .faq__respuesta { grid-template-rows: 1fr; opacity: 1; }
+      .faq__respuesta[hidden] { display: block !important; }
+      .boton-menu, .menu-movil { display: none !important; }
+    </style>
+  </noscript>
+
+  <!-- ==========================================================
+       SPRITE DE ICONOS SVG (sin librerías externas)
+       ========================================================== -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+    </symbol>
+
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/>
+      <circle cx="12" cy="12" r="4.1"/>
+      <circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <symbol id="i-flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 12h16M14 6l6 6-6 6"/>
+    </symbol>
+
+    <symbol id="i-chevron-izq" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 18l-6-6 6-6"/>
+    </symbol>
+
+    <symbol id="i-chevron-der" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18l6-6-6-6"/>
+    </symbol>
+
+    <symbol id="i-chevron-abajo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9l6 6 6-6"/>
+    </symbol>
+
+    <symbol id="i-cerrar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 6l12 12M18 6L6 18"/>
+    </symbol>
+
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 7.5h17M3.5 12h17M3.5 16.5h17"/>
+    </symbol>
+
+    <symbol id="i-mas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 5v14M5 12h14"/>
+    </symbol>
+
+    <symbol id="i-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4.1"/>
+      <path d="M12 2.2v2.4M12 19.4v2.4M2.2 12h2.4M19.4 12h2.4M5.1 5.1l1.7 1.7M17.2 17.2l1.7 1.7M18.9 5.1l-1.7 1.7M6.8 17.2l-1.7 1.7"/>
+    </symbol>
+
+    <symbol id="i-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.4 14.6A8.5 8.5 0 019.4 3.6a8.5 8.5 0 1011 11Z"/>
+    </symbol>
+
+    <symbol id="i-loto" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M24 7c5 6 6 12 0 18-6-6-5-12 0-18Z"/>
+      <path d="M11 13c6 2 10 7 8 14-6-1-10-6-8-14Z"/>
+      <path d="M37 13c-6 2-10 7-8 14 6-1 10-6 8-14Z"/>
+      <path d="M4 22c5 0 11 4 12 10-6 1-12-3-12-10Z"/>
+      <path d="M44 22c-5 0-11 4-12 10 6 1 12-3 12-10Z"/>
+      <path d="M9 34c6 6 24 6 30 0"/>
+    </symbol>
+
+    <symbol id="i-destello" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.5l2 7.5 7.5 2-7.5 2-2 7.5-2-7.5L2.5 12l7.5-2 2-7.5Z"/>
+    </symbol>
+
+    <symbol id="i-gema" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 3H10L4 10l8 11 8-11-4-7Z"/>
+      <path d="M4 10h16M8 3l4 7 4-7M12 21V10"/>
+    </symbol>
+
+    <symbol id="i-cristal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.5l3.2 6.2 5.8 3.2-5.8 3.2L12 21.3l-3.2-6.2L3 11.9l5.8-3.2L12 2.5Z"/>
+      <path d="M12 8.5l1.3 2.1L15.6 12l-2.3 1.4L12 15.5l-1.3-2.1L8.4 12l2.3-1.4L12 8.5Z"/>
+    </symbol>
+
+    <symbol id="i-ojo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/>
+      <circle cx="12" cy="12" r="3.2"/>
+    </symbol>
+
+    <symbol id="i-estrella" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.8l2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9L12 2.8Z"/>
+    </symbol>
+
+    <symbol id="i-corazon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8Z"/>
+    </symbol>
+
+    <symbol id="i-escudo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.5l8 3.3v5.6c0 5-3.4 8.5-8 10.1-4.6-1.6-8-5.1-8-10.1V5.8l8-3.3Z"/>
+      <path d="M8.5 11.7l2.3 2.3 4.7-4.7"/>
+    </symbol>
+
+    <symbol id="i-envio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2.5 6.5h11v10h-11zM13.5 9.5h4l3 3v4h-7z"/>
+      <circle cx="7" cy="18.2" r="1.7"/>
+      <circle cx="17.5" cy="18.2" r="1.7"/>
+    </symbol>
+
+    <symbol id="i-pago" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="6" width="18" height="13" rx="2.5"/>
+      <path d="M3 9.5h18M16 13.8h3"/>
+    </symbol>
+
+    <symbol id="i-devolucion" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 9a9 9 0 1114.7 7.4"/>
+      <path d="M4 4v5h5"/>
+    </symbol>
+
+    <symbol id="i-sello" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="9.5" r="5.5"/>
+      <path d="M8.5 14.5L7 22l5-2.5L17 22l-1.5-7.5M9.7 9.5l1.5 1.5 3.1-3.1"/>
+    </symbol>
+
+    <symbol id="i-caja" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 8.5L12 4l8.5 4.5v8L12 21l-8.5-4.5v-8Z"/>
+      <path d="M3.5 8.5L12 13l8.5-4.5M12 13v8"/>
+    </symbol>
+
+    <symbol id="i-cadena" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9.5 14.5l5-5"/>
+      <path d="M7.2 17l-1.4 1.4a3.8 3.8 0 01-5.4-5.4l3-3a3.8 3.8 0 015.4 0"/>
+      <path d="M16.8 7l1.4-1.4a3.8 3.8 0 015.4 5.4l-3 3a3.8 3.8 0 01-5.4 0"/>
+    </symbol>
+
+    <symbol id="i-gota-tachada" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.5S5.5 9 5.5 13.5a6.5 6.5 0 0013 0C18.5 9 12 2.5 12 2.5Z"/>
+      <path d="M4 4l16 16"/>
+    </symbol>
+
+    <symbol id="i-pano" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 8.5c3-2 5 2 8 0s5 2 8 0M3.5 13.5c3-2 5 2 8 0s5 2 8 0M3.5 18.5c3-2 5 2 8 0s5 2 8 0"/>
+    </symbol>
+
+    <symbol id="i-hoja" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 4C11 4 5 8 5 15c0 2.5 1.5 4.5 4 4.5 7 0 11-6 11-15.5Z"/>
+      <path d="M4 21C7 15 11 11 18 8"/>
+    </symbol>
+
+    <symbol id="i-hexagono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1l8-4.6Z"/>
+      <path d="M12 7v10M8.5 9l7 6M15.5 9l-7 6"/>
+    </symbol>
+
+    <symbol id="i-ojo-turco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <circle cx="12" cy="12" r="5.6"/>
+      <circle cx="12" cy="12" r="2.1" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <symbol id="i-mano-fatima" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7.5 21.5v-8.2L5.4 11a1.6 1.6 0 012.5-2L10 11.2V5.6a1.5 1.5 0 013 0v4.9-6a1.5 1.5 0 013 0v6.2-4.4a1.5 1.5 0 013 0v4.4-2.5a1.5 1.5 0 013 0v7.2c0 4.3-2.7 7.2-7 7.2H11a5 5 0 01-3.5-1.3Z"/>
+      <circle cx="12" cy="15.5" r="2.2"/>
+    </symbol>
+
+    <symbol id="i-arbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.5l4 6h-2l4 6h-3l3 4H6l3-4H6l4-6H8l4-6Z"/>
+      <path d="M12 18.5V22M12 14l-3-2M12 17l3-2"/>
+    </symbol>
+
+    <symbol id="i-medalla" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="9.5" r="5.5"/>
+      <path d="M8.5 14L7 22l5-2.8L17 22l-1.5-8M12 6.5v6M9.5 8.5h5"/>
+    </symbol>
+
+    <symbol id="i-lupa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10.5" cy="10.5" r="6.3"/>
+      <path d="M15.5 15.5L21 21M8 10.5h5M10.5 8v5"/>
+    </symbol>
+
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 10.5V17M12 7.2h.01"/>
+    </symbol>
+  </svg>
+
+  <!-- ==========================================================
+       ENCABEZADO Y MENÚ
+       ========================================================== -->
+  <header class="encabezado" id="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a class="marca" href="#inicio" aria-label="Amuletos de Luz, ir al inicio">
+        <span class="marca__logo">
+          <img src="img/logo.jpg" width="500" height="500" alt="Logo de Amuletos de Luz" decoding="async">
+        </span>
+        <span class="marca__texto">
+          <span class="marca__nombre">Amuletos de Luz</span>
+          <span class="marca__lema">Diseñamos Accesorios con Propósito</span>
+        </span>
+      </a>
+
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#quienes-somos">Quiénes somos</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#destacados">Destacados</a>
+        <a href="#opiniones">Opiniones</a>
+        <details class="nav-mas">
+          <summary>Más <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-chevron-abajo"></use></svg></summary>
+          <div class="nav-mas__panel">
+            <a href="#sobre-la-persona">Sobre la persona</a>
+            <a href="#sobre-la-empresa">Sobre la empresa</a>
+            <a href="#envios">Envíos y devoluciones</a>
+            <a href="#preguntas">Preguntas frecuentes</a>
+            <a href="#significados">Significado de los amuletos</a>
+            <a href="#cuidado">Cuidado de las piezas</a>
+          </div>
+        </details>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="encabezado__acciones">
+        <button type="button" class="boton-tema" id="boton-tema" aria-label="Activar modo oscuro" aria-pressed="false">
+          <svg class="icono boton-tema__luna" aria-hidden="true" focusable="false"><use href="#i-luna"></use></svg>
+          <svg class="icono boton-tema__sol" aria-hidden="true" focusable="false"><use href="#i-sol"></use></svg>
+        </button>
+
+        <a class="btn btn--pequeno encabezado__cta" href="https://wa.me/573224416570" target="_blank" rel="noopener noreferrer">
+          <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+          WhatsApp
+        </a>
+
+        <button type="button" class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú">
+          <svg class="icono boton-menu__abrir" aria-hidden="true" focusable="false"><use href="#i-menu"></use></svg>
+          <svg class="icono boton-menu__cerrar" aria-hidden="true" focusable="false"><use href="#i-cerrar"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú desplegable para celular y tablet -->
+  <div class="menu-movil" id="menu-movil" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+    <button type="button" class="menu-movil__fondo" id="menu-fondo" aria-label="Cerrar menú" tabindex="-1"></button>
+    <div class="menu-movil__panel">
+      <div class="menu-movil__barra">
+        <p class="menu-movil__rotulo">Navegación</p>
+        <button type="button" class="menu-movil__cerrar" id="menu-cerrar" aria-label="Cerrar menú">
+          <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-cerrar"></use></svg>
+        </button>
+      </div>
+
+      <nav aria-label="Menú del sitio">
+        <ul class="menu-movil__lista">
+          <li><a href="#inicio"><span class="menu-movil__num">01</span>Inicio</a></li>
+          <li><a href="#quienes-somos"><span class="menu-movil__num">02</span>Quiénes somos</a></li>
+          <li><a href="#catalogo"><span class="menu-movil__num">03</span>Catálogo</a></li>
+          <li><a href="#destacados"><span class="menu-movil__num">04</span>Destacados</a></li>
+          <li><a href="#sobre-la-persona"><span class="menu-movil__num">05</span>Sobre la persona</a></li>
+          <li><a href="#sobre-la-empresa"><span class="menu-movil__num">06</span>Sobre la empresa</a></li>
+          <li><a href="#envios"><span class="menu-movil__num">07</span>Envíos y devoluciones</a></li>
+          <li><a href="#preguntas"><span class="menu-movil__num">08</span>Preguntas frecuentes</a></li>
+          <li><a href="#opiniones"><span class="menu-movil__num">09</span>Opiniones</a></li>
+          <li><a href="#significados"><span class="menu-movil__num">10</span>Significados</a></li>
+          <li><a href="#cuidado"><span class="menu-movil__num">11</span>Cuidado de las piezas</a></li>
+          <li><a href="#contacto"><span class="menu-movil__num">12</span>Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-movil__pie">
+        <a class="btn btn-ancho" href="https://wa.me/573224416570" target="_blank" rel="noopener noreferrer">
+          <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <div class="menu-movil__social">
+          <a href="https://www.instagram.com/amuletos_de_luz/" target="_blank" rel="noopener noreferrer">
+            <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-instagram"></use></svg>
+            @amuletos_de_luz
+          </a>
+          <a href="https://wa.me/573224416570" target="_blank" rel="noopener noreferrer">
+            <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+            +57 322 441 65 70
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="contenido-principal" tabindex="-1">
+    <!-- ========================================================
+         A. PORTADA
+         ======================================================== -->
+    <section class="portada" id="inicio" aria-labelledby="titulo-portada">
+      <img class="portada__fondo"
+           src="img/portada.jpg"
+           width="1024"
+           height="572"
+           alt="Fondo de tela rosada con destellos de luz y siluetas de flor de loto"
+           fetchpriority="high"
+           decoding="async">
+      <div class="portada__velo" aria-hidden="true"></div>
+
+      <svg class="portada__decoracion portada__decoracion--loto-izq" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <use href="#i-loto"></use>
+      </svg>
+      <svg class="portada__decoracion portada__decoracion--loto-der" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <use href="#i-loto"></use>
+      </svg>
+      <svg class="portada__destello portada__destello--1" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <use href="#i-destello"></use>
+      </svg>
+      <svg class="portada__destello portada__destello--2" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <use href="#i-destello"></use>
+      </svg>
+      <svg class="portada__destello portada__destello--3" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <use href="#i-destello"></use>
+      </svg>
+      <svg class="portada__destello portada__destello--4" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <use href="#i-destello"></use>
+      </svg>
+
+      <div class="contenedor portada__contenido">
+        <p class="portada__ubicacion">Soacha, Cundinamarca · Colombia</p>
+
+        <div class="portada__logo">
+          <img src="img/logo.jpg"
+               width="500"
+               height="500"
+               alt="Logo de Amuletos de Luz: flor de loto vino tinto con resplandor rosa"
+               fetchpriority="high"
+               decoding="async">
+        </div>
+
+        <h1 class="portada__titulo" id="titulo-portada">
+          <span class="visualmente-oculto">Amuletos de Luz — </span>
+          Diseñamos Accesorios <em>con Propósito</em>
+        </h1>
+
+        <p class="portada__texto">Joyería artesanal con intención, hecha con piedras naturales y materiales de alta durabilidad.</p>
+
+        <div class="portada__acciones">
+          <a class="btn btn--claro btn--grande" href="https://wa.me/573224416570" target="_blank" rel="noopener noreferrer">
+            <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+            Escríbenos por WhatsApp
+          </a>
+          <a class="btn btn--fantasma btn--grande" href="#catalogo">Ver el catálogo</a>
+        </div>
+
+        <ul class="portada__sellos" aria-label="Características de la marca">
+          <li><svg class="icono" aria-hidden="true" focusable="false"><use href="#i-gema"></use></svg>Piedras naturales</li>
+          <li><svg class="icono" aria-hidden="true" focusable="false"><use href="#i-escudo"></use></svg>Materiales duraderos</li>
+          <li><svg class="icono" aria-hidden="true" focusable="false"><use href="#i-envio"></use></svg>Envíos a gran parte de Colombia</li>
+        </ul>
+      </div>
+
+      <a class="portada__scroll" href="#quienes-somos" aria-label="Bajar a la sección Quiénes somos">
+        <span>Descubre</span>
+        <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-chevron-abajo"></use></svg>
+      </a>
+    </section>
+
+    <!-- ========================================================
+         B. QUIÉNES SOMOS
+         ======================================================== -->
+    <section class="seccion seccion--esencia" id="quienes-somos" aria-labelledby="titulo-quienes-somos">
+      <svg class="adorno-loto" style="width: 24rem; top: -6rem; right: -7rem; transform: rotate(18deg);" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <use href="#i-loto"></use>
+      </svg>
+
+      <div class="contenedor">
+        <header class="seccion__cabecera seccion__cabecera--centrada revelar">
+          <p class="eyebrow">Propósito</p>
+          <h2 id="titulo-quienes-somos">Quiénes somos</h2>
+          <p class="seccion__intro">Joyería artesanal con intención, hecha con piedras naturales y materiales de alta durabilidad.</p>
+        </header>
+
+        <div class="pilares" data-revelar-grupo>
+          <article class="pilar revelar">
+            <span class="pilar__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-loto"></use></svg>
+            </span>
+            <h3>Misión</h3>
+            <p>Ofrecer a nuestros clientes piezas de joyería artesanal holística e intencionada de alta durabilidad, confeccionadas con piedras naturales e insumos inalterables (acero inoxidable, zamak italiano y rodio importado), brindando una experiencia de compra con significado emocional y asesoría energética personalizada que promueva el bienestar, el autocuidado y la conexión personal.</p>
+          </article>
+
+          <article class="pilar revelar">
+            <span class="pilar__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-estrella"></use></svg>
+            </span>
+            <h3>Visión</h3>
+            <p>Para el año 2028, Amuletos de Luz será reconocida como la marca líder de joyería holística y accesorios de bienestar en el municipio de Soacha y la Sabana de Bogotá, consolidando un modelo de negocio omnicanal sostenible, reconocido por su rigor técnico, responsabilidad social artesanal y una comunidad digital activa en torno al autocuidado.</p>
+          </article>
+
+          <article class="pilar pilar--destacado revelar">
+            <span class="pilar__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-escudo"></use></svg>
+            </span>
+            <h3>Propuesta de valor</h3>
+            <p><strong>“Accesorios de Poder con Garantía de Longevidad”.</strong> Resuelve el problema de la “bisutería desechable” con insumos inalterables (acero inoxidable, zamak italiana, rodio importado e hilos de alta tenacidad) combinados con piedras naturales auténticas. Además se extiende a una experiencia de “Asesoría Energética Personalizada”, física y digital, que guía al cliente en la selección e intención de su amuleto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         C. CATÁLOGO
+         ======================================================== -->
+    <section class="seccion seccion--catalogo" id="catalogo" aria-labelledby="titulo-catalogo">
+      <div class="contenedor">
+        <div class="catalogo__cabecera">
+          <header class="seccion__cabecera revelar">
+            <p class="eyebrow">Accesorios con significado</p>
+            <h2 id="titulo-catalogo">Catálogo</h2>
+            <p class="seccion__intro">Piezas con intención para ti o para regalar.</p>
+          </header>
+          <p class="catalogo__sello" aria-hidden="true">
+            <svg class="icono" focusable="false"><use href="#i-destello"></use></svg>
+            Diez diseños
+          </p>
+        </div>
+
+        <div class="productos" data-revelar-grupo>
+          <!-- Producto 01 -->
+          <article class="producto revelar">
+            <button type="button" class="producto__foto" data-visor-indice="0" aria-haspopup="dialog" aria-label="Ampliar la foto de Cielo Profundo">
+              <img src="img/producto1.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Cielo Profundo: pulsera doble de piedras azules irregulares con dije dorado en forma de corazón">
+              <span class="producto__lupa" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-lupa"></use></svg>
+              </span>
+            </button>
+            <div class="producto__cuerpo">
+              <div class="producto__nombre">
+                <span class="producto__numero" aria-hidden="true">01</span>
+                <h3>Cielo Profundo</h3>
+              </div>
+              <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Cielo%20Profundo.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Comprar Cielo Profundo por WhatsApp">
+                <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                Comprar por WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 02 -->
+          <article class="producto revelar">
+            <button type="button" class="producto__foto" data-visor-indice="1" aria-haspopup="dialog" aria-label="Ampliar la foto de Raíz y Fuerza">
+              <img src="img/producto2.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Raíz y Fuerza: pulsera de piedra volcánica negra con dije plateado de árbol">
+              <span class="producto__lupa" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-lupa"></use></svg>
+              </span>
+            </button>
+            <div class="producto__cuerpo">
+              <div class="producto__nombre">
+                <span class="producto__numero" aria-hidden="true">02</span>
+                <h3>Raíz y Fuerza</h3>
+              </div>
+              <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Ra%C3%ADz%20y%20Fuerza.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Comprar Raíz y Fuerza por WhatsApp">
+                <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                Comprar por WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 03 -->
+          <article class="producto revelar">
+            <button type="button" class="producto__foto" data-visor-indice="2" aria-haspopup="dialog" aria-label="Ampliar la foto de Noche Azul">
+              <img src="img/producto3.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Noche Azul: pulsera de esferas oscuras con destellos azules y separadores plateados">
+              <span class="producto__lupa" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-lupa"></use></svg>
+              </span>
+            </button>
+            <div class="producto__cuerpo">
+              <div class="producto__nombre">
+                <span class="producto__numero" aria-hidden="true">03</span>
+                <h3>Noche Azul</h3>
+              </div>
+              <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Noche%20Azul.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Comprar Noche Azul por WhatsApp">
+                <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                Comprar por WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 04 -->
+          <article class="producto revelar">
+            <button type="button" class="producto__foto" data-visor-indice="3" aria-haspopup="dialog" aria-label="Ampliar la foto de Arcoíris de Luz">
+              <img src="img/producto4.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Arcoíris de Luz: dos pulseras negras con piedras de colores">
+              <span class="producto__lupa" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-lupa"></use></svg>
+              </span>
+            </button>
+            <div class="producto__cuerpo">
+              <div class="producto__nombre">
+                <span class="producto__numero" aria-hidden="true">04</span>
+                <h3>Arcoíris de Luz</h3>
+              </div>
+              <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Arco%C3%ADris%20de%20Luz.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Comprar Arcoíris de Luz por WhatsApp">
+                <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                Comprar por WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 05 -->
+          <article class="producto revelar">
+            <button type="button" class="producto__foto" data-visor-indice="4" aria-haspopup="dialog" aria-label="Ampliar la foto de Verde Esperanza">
+              <img src="img/producto5.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Verde Esperanza: dos pulseras de piedras verdes con dije dorado en forma de corazón">
+              <span class="producto__lupa" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-lupa"></use></svg>
+              </span>
+            </button>
+            <div class="producto__cuerpo">
+              <div class="producto__nombre">
+                <span class="producto__numero" aria-hidden="true">05</span>
+                <h3>Verde Esperanza</h3>
+              </div>
+              <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Verde%20Esperanza.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Comprar Verde Esperanza por WhatsApp">
+                <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                Comprar por WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 06 -->
+          <article class="producto revelar">
+            <button type="button" class="producto__foto" data-visor-indice="5" aria-haspopup="dialog" aria-label="Ampliar la foto de Estrella de Regalo">
+              <img src="img/producto6.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Estrella de Regalo: dos pulseras verdes con estrella blanca, en sobres rosados con puntos blancos">
+              <span class="producto__lupa" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-lupa"></use></svg>
+              </span>
+            </button>
+            <div class="producto__cuerpo">
+              <div class="producto__nombre">
+                <span class="producto__numero" aria-hidden="true">06</span>
+                <h3>Estrella de Regalo</h3>
+              </div>
+              <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Estrella%20de%20Regalo.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Comprar Estrella de Regalo por WhatsApp">
+                <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                Comprar por WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 07 -->
+          <article class="producto revelar">
+            <button type="button" class="producto__foto" data-visor-indice="6" aria-haspopup="dialog" aria-label="Ampliar la foto de Decena Protectora">
+              <img src="img/producto7.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Decena Protectora: decenas de madera con cordón rojo y medallas plateadas">
+              <span class="producto__lupa" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-lupa"></use></svg>
+              </span>
+            </button>
+            <div class="producto__cuerpo">
+              <div class="producto__nombre">
+                <span class="producto__numero" aria-hidden="true">07</span>
+                <h3>Decena Protectora</h3>
+              </div>
+              <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Decena%20Protectora.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Comprar Decena Protectora por WhatsApp">
+                <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                Comprar por WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 08 -->
+          <article class="producto revelar">
+            <button type="button" class="producto__foto" data-visor-indice="7" aria-haspopup="dialog" aria-label="Ampliar la foto de Armonía de Piedras">
+              <img src="img/producto8.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Armonía de Piedras: pila de pulseras de varias piedras con dijes dorados">
+              <span class="producto__lupa" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-lupa"></use></svg>
+              </span>
+            </button>
+            <div class="producto__cuerpo">
+              <div class="producto__nombre">
+                <span class="producto__numero" aria-hidden="true">08</span>
+                <h3>Armonía de Piedras</h3>
+              </div>
+              <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Armon%C3%ADa%20de%20Piedras.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Comprar Armonía de Piedras por WhatsApp">
+                <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                Comprar por WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 09 -->
+          <article class="producto revelar">
+            <button type="button" class="producto__foto" data-visor-indice="8" aria-haspopup="dialog" aria-label="Ampliar la foto de Sol y Turquesa">
+              <img src="img/producto9.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Sol y Turquesa: pulseras rojas y turquesa con ojos turcos y dijes dorados de sol, estrella y mano">
+              <span class="producto__lupa" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-lupa"></use></svg>
+              </span>
+            </button>
+            <div class="producto__cuerpo">
+              <div class="producto__nombre">
+                <span class="producto__numero" aria-hidden="true">09</span>
+                <h3>Sol y Turquesa</h3>
+              </div>
+              <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Sol%20y%20Turquesa.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Comprar Sol y Turquesa por WhatsApp">
+                <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                Comprar por WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <!-- Producto 10 -->
+          <article class="producto revelar">
+            <button type="button" class="producto__foto" data-visor-indice="9" aria-haspopup="dialog" aria-label="Ampliar la foto de Dúo Mano de Fátima">
+              <img src="img/producto10.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Dúo Mano de Fátima: dos pulseras, negra y ojo de tigre, con mano de Fátima blanca">
+              <span class="producto__lupa" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-lupa"></use></svg>
+              </span>
+            </button>
+            <div class="producto__cuerpo">
+              <div class="producto__nombre">
+                <span class="producto__numero" aria-hidden="true">10</span>
+                <h3>Dúo Mano de Fátima</h3>
+              </div>
+              <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20D%C3%BAo%20Mano%20de%20F%C3%A1tima.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Comprar Dúo Mano de Fátima por WhatsApp">
+                <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                Comprar por WhatsApp
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="catalogo__nota revelar">
+          <p>Tenemos muchos más diseños. Escríbenos por WhatsApp y te los mostramos.</p>
+          <a href="https://wa.me/573224416570" target="_blank" rel="noopener noreferrer">
+            <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+            Escríbenos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         D. DESTACADOS
+         ======================================================== -->
+    <section class="seccion seccion--vino" id="destacados" aria-labelledby="titulo-destacados">
+      <svg class="destacados__adorno" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <use href="#i-loto"></use>
+      </svg>
+
+      <div class="contenedor">
+        <header class="seccion__cabecera seccion__cabecera--centrada revelar">
+          <p class="eyebrow">Selección</p>
+          <h2 id="titulo-destacados">Destacados</h2>
+          <p class="seccion__intro">Una selección de las piezas que conforman nuestra colección.</p>
+        </header>
+
+        <div class="carrusel carrusel--productos" data-carrusel="productos" role="region" aria-roledescription="carrusel" aria-label="Productos destacados">
+          <div class="carrusel__viewport">
+            <div class="carrusel__pista" data-carrusel-pista>
+              <article class="destacado" role="group" aria-roledescription="diapositiva" aria-label="1 de 10: Cielo Profundo">
+                <div class="destacado__foto">
+                  <img src="img/producto1.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Cielo Profundo: pulsera doble de piedras azules irregulares con dije dorado en forma de corazón">
+                </div>
+                <div class="destacado__cuerpo">
+                  <h3>Cielo Profundo</h3>
+                  <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Cielo%20Profundo.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Consultar por Cielo Profundo en WhatsApp">
+                    <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                    Consulta por WhatsApp
+                  </a>
+                </div>
+              </article>
+
+              <article class="destacado" role="group" aria-roledescription="diapositiva" aria-label="2 de 10: Raíz y Fuerza">
+                <div class="destacado__foto">
+                  <img src="img/producto2.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Raíz y Fuerza: pulsera de piedra volcánica negra con dije plateado de árbol">
+                </div>
+                <div class="destacado__cuerpo">
+                  <h3>Raíz y Fuerza</h3>
+                  <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Ra%C3%ADz%20y%20Fuerza.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Consultar por Raíz y Fuerza en WhatsApp">
+                    <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                    Consulta por WhatsApp
+                  </a>
+                </div>
+              </article>
+
+              <article class="destacado" role="group" aria-roledescription="diapositiva" aria-label="3 de 10: Noche Azul">
+                <div class="destacado__foto">
+                  <img src="img/producto3.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Noche Azul: pulsera de esferas oscuras con destellos azules y separadores plateados">
+                </div>
+                <div class="destacado__cuerpo">
+                  <h3>Noche Azul</h3>
+                  <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Noche%20Azul.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Consultar por Noche Azul en WhatsApp">
+                    <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                    Consulta por WhatsApp
+                  </a>
+                </div>
+              </article>
+
+              <article class="destacado" role="group" aria-roledescription="diapositiva" aria-label="4 de 10: Arcoíris de Luz">
+                <div class="destacado__foto">
+                  <img src="img/producto4.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Arcoíris de Luz: dos pulseras negras con piedras de colores">
+                </div>
+                <div class="destacado__cuerpo">
+                  <h3>Arcoíris de Luz</h3>
+                  <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Arco%C3%ADris%20de%20Luz.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Consultar por Arcoíris de Luz en WhatsApp">
+                    <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                    Consulta por WhatsApp
+                  </a>
+                </div>
+              </article>
+
+              <article class="destacado" role="group" aria-roledescription="diapositiva" aria-label="5 de 10: Verde Esperanza">
+                <div class="destacado__foto">
+                  <img src="img/producto5.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Verde Esperanza: dos pulseras de piedras verdes con dije dorado en forma de corazón">
+                </div>
+                <div class="destacado__cuerpo">
+                  <h3>Verde Esperanza</h3>
+                  <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Verde%20Esperanza.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Consultar por Verde Esperanza en WhatsApp">
+                    <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                    Consulta por WhatsApp
+                  </a>
+                </div>
+              </article>
+
+              <article class="destacado" role="group" aria-roledescription="diapositiva" aria-label="6 de 10: Estrella de Regalo">
+                <div class="destacado__foto">
+                  <img src="img/producto6.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Estrella de Regalo: dos pulseras verdes con estrella blanca, en sobres rosados con puntos blancos">
+                </div>
+                <div class="destacado__cuerpo">
+                  <h3>Estrella de Regalo</h3>
+                  <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Estrella%20de%20Regalo.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Consultar por Estrella de Regalo en WhatsApp">
+                    <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                    Consulta por WhatsApp
+                  </a>
+                </div>
+              </article>
+
+              <article class="destacado" role="group" aria-roledescription="diapositiva" aria-label="7 de 10: Decena Protectora">
+                <div class="destacado__foto">
+                  <img src="img/producto7.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Decena Protectora: decenas de madera con cordón rojo y medallas plateadas">
+                </div>
+                <div class="destacado__cuerpo">
+                  <h3>Decena Protectora</h3>
+                  <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Decena%20Protectora.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Consultar por Decena Protectora en WhatsApp">
+                    <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                    Consulta por WhatsApp
+                  </a>
+                </div>
+              </article>
+
+              <article class="destacado" role="group" aria-roledescription="diapositiva" aria-label="8 de 10: Armonía de Piedras">
+                <div class="destacado__foto">
+                  <img src="img/producto8.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Armonía de Piedras: pila de pulseras de varias piedras con dijes dorados">
+                </div>
+                <div class="destacado__cuerpo">
+                  <h3>Armonía de Piedras</h3>
+                  <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Armon%C3%ADa%20de%20Piedras.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Consultar por Armonía de Piedras en WhatsApp">
+                    <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                    Consulta por WhatsApp
+                  </a>
+                </div>
+              </article>
+
+              <article class="destacado" role="group" aria-roledescription="diapositiva" aria-label="9 de 10: Sol y Turquesa">
+                <div class="destacado__foto">
+                  <img src="img/producto9.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Sol y Turquesa: pulseras rojas y turquesa con ojos turcos y dijes dorados de sol, estrella y mano">
+                </div>
+                <div class="destacado__cuerpo">
+                  <h3>Sol y Turquesa</h3>
+                  <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20Sol%20y%20Turquesa.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Consultar por Sol y Turquesa en WhatsApp">
+                    <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                    Consulta por WhatsApp
+                  </a>
+                </div>
+              </article>
+
+              <article class="destacado" role="group" aria-roledescription="diapositiva" aria-label="10 de 10: Dúo Mano de Fátima">
+                <div class="destacado__foto">
+                  <img src="img/producto10.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Dúo Mano de Fátima: dos pulseras, negra y ojo de tigre, con mano de Fátima blanca">
+                </div>
+                <div class="destacado__cuerpo">
+                  <h3>Dúo Mano de Fátima</h3>
+                  <a class="btn btn--pequeno" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20comprar%20D%C3%BAo%20Mano%20de%20F%C3%A1tima.%20%C2%BFMe%20ayudan%20con%20la%20informaci%C3%B3n%20y%20el%20pedido%3F" target="_blank" rel="noopener noreferrer" aria-label="Consultar por Dúo Mano de Fátima en WhatsApp">
+                    <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                    Consulta por WhatsApp
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="carrusel__controles">
+            <button type="button" class="carrusel__flecha" data-carrusel-anterior aria-label="Ver productos destacados anteriores">
+              <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-chevron-izq"></use></svg>
+            </button>
+            <p class="carrusel__contador" data-carrusel-contador aria-hidden="true">01 / 10</p>
+            <button type="button" class="carrusel__flecha" data-carrusel-siguiente aria-label="Ver productos destacados siguientes">
+              <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-chevron-der"></use></svg>
+            </button>
+          </div>
+          <div class="carrusel__puntos" data-carrusel-puntos role="group" aria-label="Seleccionar grupo de productos destacados"></div>
+          <p class="visualmente-oculto" aria-live="polite" data-carrusel-estado></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         E. SOBRE LA PERSONA
+         ======================================================== -->
+    <section class="seccion seccion--persona" id="sobre-la-persona" aria-labelledby="titulo-persona">
+      <div class="contenedor">
+        <div class="split">
+          <div class="split__texto revelar">
+            <p class="eyebrow">Thanit Fernández</p>
+            <h2 id="titulo-persona">Sobre la persona</h2>
+            <p>Thanit Angélica Fernández Hernández es la Gerente General y Directora Creativa de Amuletos de Luz. Dirige la marca y diseña sus colecciones, cuidando que cada pieza combine un significado con una estética cuidada.</p>
+          </div>
+
+          <figure class="split__media media-enmarcada revelar">
+            <img src="img/yo.jpeg"
+                 width="1600"
+                 height="1600"
+                 loading="lazy"
+                 decoding="async"
+                 alt="Thanit Angélica Fernández Hernández, Gerente General y Directora Creativa de Amuletos de Luz">
+            <figcaption>Thanit Fernández · Directora Creativa</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         F. SOBRE LA EMPRESA
+         ======================================================== -->
+    <section class="seccion seccion--empresa" id="sobre-la-empresa" aria-labelledby="titulo-empresa">
+      <svg class="adorno-loto" style="width: 20rem; bottom: -4rem; left: -5rem; transform: rotate(-20deg);" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <use href="#i-loto"></use>
+      </svg>
+
+      <div class="contenedor">
+        <div class="split split--invertida">
+          <figure class="split__media media-enmarcada media-enmarcada--logo revelar">
+            <img src="img/logo.jpg"
+                 width="500"
+                 height="500"
+                 loading="lazy"
+                 decoding="async"
+                 alt="Logo de Amuletos de Luz con flor de loto y el slogan Diseñamos Accesorios con Propósito">
+            <figcaption>Amuletos de Luz · Soacha, Cundinamarca</figcaption>
+          </figure>
+
+          <div class="split__texto revelar">
+            <p class="eyebrow">Soacha, Cundinamarca</p>
+            <h2 id="titulo-empresa">Sobre la empresa</h2>
+            <p>Amuletos de Luz es un emprendimiento de Soacha, Cundinamarca, que diseña y ensambla joyería artesanal con intención. Trabajamos con acero inoxidable, zamak italiano con baño de rodio importado, hilos de alta resistencia y piedras naturales. No competimos por precio ni por modas pasajeras, sino por significado y durabilidad. Enviamos a gran parte de Colombia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         G. ENVÍOS Y DEVOLUCIONES
+         ======================================================== -->
+    <section class="seccion seccion--envios" id="envios" aria-labelledby="titulo-envios">
+      <div class="contenedor">
+        <header class="seccion__cabecera seccion__cabecera--centrada revelar">
+          <p class="eyebrow">Información práctica</p>
+          <h2 id="titulo-envios">Envíos y devoluciones</h2>
+        </header>
+
+        <div class="envios__panel revelar">
+          <div class="envios__contenido">
+            <p>Enviamos a gran parte de Colombia. Los plazos, costos y condiciones de devolución se confirman por WhatsApp según tu ciudad. El medio de pago también se coordina por WhatsApp. Nuestras piezas tienen garantía técnica de 12 meses sobre metales y ensamblaje, bajo uso normal.</p>
+            <a class="btn" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20consultar%20el%20env%C3%ADo%20a%20mi%20ciudad." target="_blank" rel="noopener noreferrer">
+              <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+              Consulta tu envío por WhatsApp
+            </a>
+          </div>
+
+          <ul class="envios__iconos" aria-label="Detalles de envío, pago y devoluciones">
+            <li class="envio-item">
+              <span class="envio-item__icono" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-envio"></use></svg>
+              </span>
+              <div>
+                <h3>Envíos</h3>
+                <p>Enviamos a gran parte de Colombia.</p>
+              </div>
+            </li>
+            <li class="envio-item">
+              <span class="envio-item__icono" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-pago"></use></svg>
+              </span>
+              <div>
+                <h3>Pago</h3>
+                <p>El medio de pago también se coordina por WhatsApp.</p>
+                <span class="etiqueta-pago">
+                  <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+                  Pago coordinado por WhatsApp
+                </span>
+              </div>
+            </li>
+            <li class="envio-item">
+              <span class="envio-item__icono" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-devolucion"></use></svg>
+              </span>
+              <div>
+                <h3>Devoluciones</h3>
+                <p>Los plazos, costos y condiciones de devolución se confirman por WhatsApp según tu ciudad.</p>
+              </div>
+            </li>
+            <li class="envio-item">
+              <span class="envio-item__icono" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-sello"></use></svg>
+              </span>
+              <div>
+                <h3>Garantía</h3>
+                <p>12 meses sobre metales y ensamblaje, bajo uso normal.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         H. PREGUNTAS FRECUENTES
+         ======================================================== -->
+    <section class="seccion seccion--faq" id="preguntas" aria-labelledby="titulo-preguntas">
+      <div class="contenedor">
+        <div class="faq__layout">
+          <header class="seccion__cabecera revelar">
+            <p class="eyebrow">Resolvemos tus dudas</p>
+            <h2 id="titulo-preguntas">Preguntas frecuentes</h2>
+            <div class="faq__apoyo">
+              <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+              <p>Escríbenos por WhatsApp y te asesoramos. <a href="https://wa.me/573224416570" target="_blank" rel="noopener noreferrer">Ir a WhatsApp</a>.</p>
+            </div>
+          </header>
+
+          <div class="faq__acordeon revelar">
+            <div class="faq__item">
+              <h3 class="faq__pregunta">
+                <button type="button" class="faq__boton" id="faq-boton-1" aria-expanded="true" aria-controls="faq-respuesta-1">
+                  <span>¿De qué están hechas las piezas?</span>
+                  <span class="faq__icono" aria-hidden="true">
+                    <svg class="icono" focusable="false"><use href="#i-mas"></use></svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="faq__respuesta is-open" id="faq-respuesta-1" role="region" aria-labelledby="faq-boton-1">
+                <div class="faq__respuesta-interior">
+                  <p>De acero inoxidable, zamak italiano con baño de rodio, hilos de alta resistencia y piedras naturales.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <h3 class="faq__pregunta">
+                <button type="button" class="faq__boton" id="faq-boton-2" aria-expanded="false" aria-controls="faq-respuesta-2">
+                  <span>¿Se pueden mojar o usar con perfume?</span>
+                  <span class="faq__icono" aria-hidden="true">
+                    <svg class="icono" focusable="false"><use href="#i-mas"></use></svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="faq__respuesta" id="faq-respuesta-2" role="region" aria-labelledby="faq-boton-2" hidden>
+                <div class="faq__respuesta-interior">
+                  <p>Los metales y el ensamblaje resisten el agua dulce, el sudor y las fragancias comunes. Las piezas son hipoalergénicas.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <h3 class="faq__pregunta">
+                <button type="button" class="faq__boton" id="faq-boton-3" aria-expanded="false" aria-controls="faq-respuesta-3">
+                  <span>¿Tienen garantía?</span>
+                  <span class="faq__icono" aria-hidden="true">
+                    <svg class="icono" focusable="false"><use href="#i-mas"></use></svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="faq__respuesta" id="faq-respuesta-3" role="region" aria-labelledby="faq-boton-3" hidden>
+                <div class="faq__respuesta-interior">
+                  <p>Sí, 12 meses sobre metales y ensamblaje, bajo uso normal.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <h3 class="faq__pregunta">
+                <button type="button" class="faq__boton" id="faq-boton-4" aria-expanded="false" aria-controls="faq-respuesta-4">
+                  <span>¿Cómo hago un pedido?</span>
+                  <span class="faq__icono" aria-hidden="true">
+                    <svg class="icono" focusable="false"><use href="#i-mas"></use></svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="faq__respuesta" id="faq-respuesta-4" role="region" aria-labelledby="faq-boton-4" hidden>
+                <div class="faq__respuesta-interior">
+                  <p>Escríbenos por WhatsApp y te asesoramos.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <h3 class="faq__pregunta">
+                <button type="button" class="faq__boton" id="faq-boton-5" aria-expanded="false" aria-controls="faq-respuesta-5">
+                  <span>¿Cómo puedo pagar?</span>
+                  <span class="faq__icono" aria-hidden="true">
+                    <svg class="icono" focusable="false"><use href="#i-mas"></use></svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="faq__respuesta" id="faq-respuesta-5" role="region" aria-labelledby="faq-boton-5" hidden>
+                <div class="faq__respuesta-interior">
+                  <p>El medio de pago se coordina por WhatsApp al hacer tu pedido.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <h3 class="faq__pregunta">
+                <button type="button" class="faq__boton" id="faq-boton-6" aria-expanded="false" aria-controls="faq-respuesta-6">
+                  <span>¿Cuánto cuestan?</span>
+                  <span class="faq__icono" aria-hidden="true">
+                    <svg class="icono" focusable="false"><use href="#i-mas"></use></svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="faq__respuesta" id="faq-respuesta-6" role="region" aria-labelledby="faq-boton-6" hidden>
+                <div class="faq__respuesta-interior">
+                  <p>Los precios se consultan por WhatsApp.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <h3 class="faq__pregunta">
+                <button type="button" class="faq__boton" id="faq-boton-7" aria-expanded="false" aria-controls="faq-respuesta-7">
+                  <span>¿Me ayudan a elegir?</span>
+                  <span class="faq__icono" aria-hidden="true">
+                    <svg class="icono" focusable="false"><use href="#i-mas"></use></svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="faq__respuesta" id="faq-respuesta-7" role="region" aria-labelledby="faq-boton-7" hidden>
+                <div class="faq__respuesta-interior">
+                  <p>Sí, te asesoramos según la intención que busques.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <h3 class="faq__pregunta">
+                <button type="button" class="faq__boton" id="faq-boton-8" aria-expanded="false" aria-controls="faq-respuesta-8">
+                  <span>¿Hacen envíos a mi ciudad?</span>
+                  <span class="faq__icono" aria-hidden="true">
+                    <svg class="icono" focusable="false"><use href="#i-mas"></use></svg>
+                  </span>
+                </button>
+              </h3>
+              <div class="faq__respuesta" id="faq-respuesta-8" role="region" aria-labelledby="faq-boton-8" hidden>
+                <div class="faq__respuesta-interior">
+                  <p>Enviamos a gran parte de Colombia. Consúltanos por WhatsApp.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         I. OPINIONES DE CLIENTES
+         ======================================================== -->
+    <section class="seccion seccion--opiniones" id="opiniones" aria-labelledby="titulo-opiniones">
+      <div class="contenedor">
+        <header class="seccion__cabecera seccion__cabecera--centrada revelar">
+          <p class="eyebrow">Confianza</p>
+          <h2 id="titulo-opiniones">Opiniones de clientes</h2>
+        </header>
+
+        <div class="carrusel opiniones__carrusel" data-carrusel="opiniones" role="region" aria-roledescription="carrusel" aria-label="Opiniones de clientes">
+          <div class="carrusel__viewport">
+            <div class="carrusel__pista" data-carrusel-pista>
+              <figure class="testimonio" role="group" aria-roledescription="diapositiva" aria-label="Opinión 1 de 3">
+                <span class="testimonio__comilla" aria-hidden="true">“</span>
+                <blockquote class="testimonio__texto">Vivo en Medellín y pedí un amuleto para mi mamá por su cumpleaños. Me encantó que llegara bien empacado y justo a tiempo. La calidad es hermosa y se nota que cada pieza está hecha con intención. Mi mamá no se lo quita. ¡Ya soy clienta fiel de Amuletos de Luz!</blockquote>
+                <figcaption class="testimonio__autor">
+                  <span class="testimonio__iniciales" aria-hidden="true">LG</span>
+                  — Laura G., 32 años, Medellín
+                </figcaption>
+              </figure>
+
+              <figure class="testimonio" role="group" aria-roledescription="diapositiva" aria-label="Opinión 2 de 3">
+                <span class="testimonio__comilla" aria-hidden="true">“</span>
+                <blockquote class="testimonio__texto">Compré dos amuletos para mí y para mi mejor amiga porque quería algo con significado, no solo un accesorio bonito. El envío a Bogotá fue rapidísimo y la atención por WhatsApp fue súper cercana. Me encanta apoyar emprendimientos de Soacha que hacen cosas tan lindas.</blockquote>
+                <figcaption class="testimonio__autor">
+                  <span class="testimonio__iniciales" aria-hidden="true">SR</span>
+                  — Santiago R., 24 años, Bogotá
+                </figcaption>
+              </figure>
+
+              <figure class="testimonio" role="group" aria-roledescription="diapositiva" aria-label="Opinión 3 de 3">
+                <span class="testimonio__comilla" aria-hidden="true">“</span>
+                <blockquote class="testimonio__texto">Tenía tiempo buscando un amuleto de protección para mi nieto que empieza la universidad. En Amuletos de Luz me asesoraron con paciencia y me ayudaron a elegir el indicado. Llegó hasta Cali sin ningún problema. Se nota el cariño en cada detalle.</blockquote>
+                <figcaption class="testimonio__autor">
+                  <span class="testimonio__iniciales" aria-hidden="true">MC</span>
+                  — Doña Marta C., 68 años, Cali
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="carrusel__controles">
+            <button type="button" class="carrusel__flecha" data-carrusel-anterior aria-label="Ver opinión anterior">
+              <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-chevron-izq"></use></svg>
+            </button>
+            <p class="carrusel__contador" data-carrusel-contador aria-hidden="true">01 / 03</p>
+            <button type="button" class="carrusel__flecha" data-carrusel-siguiente aria-label="Ver opinión siguiente">
+              <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-chevron-der"></use></svg>
+            </button>
+          </div>
+          <div class="carrusel__puntos" data-carrusel-puntos role="group" aria-label="Seleccionar opinión"></div>
+          <p class="visualmente-oculto" aria-live="polite" data-carrusel-estado></p>
+        </div>
+
+        <p class="opiniones__nota">Opiniones compartidas por clientes de Amuletos de Luz.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         J. SIGNIFICADO DE LOS AMULETOS
+         ======================================================== -->
+    <section class="seccion seccion--significados" id="significados" aria-labelledby="titulo-significados">
+      <div class="contenedor">
+        <header class="seccion__cabecera seccion__cabecera--centrada revelar">
+          <p class="eyebrow">Piedras y símbolos</p>
+          <h2 id="titulo-significados">Significado de los amuletos</h2>
+          <p class="seccion__intro">Creencias y tradiciones populares asociadas a cada piedra y símbolo.</p>
+        </header>
+
+        <div class="significados__grid" data-revelar-grupo>
+          <article class="significado revelar">
+            <span class="significado__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-gema"></use></svg>
+            </span>
+            <h3>Cuarzo rosa</h3>
+            <p>Amor propio y ternura.</p>
+          </article>
+
+          <article class="significado revelar">
+            <span class="significado__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-cristal"></use></svg>
+            </span>
+            <h3>Amatista</h3>
+            <p>Calma e intuición.</p>
+          </article>
+
+          <article class="significado revelar">
+            <span class="significado__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-ojo"></use></svg>
+            </span>
+            <h3>Ojo de tigre</h3>
+            <p>Protección y confianza.</p>
+          </article>
+
+          <article class="significado revelar">
+            <span class="significado__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-hexagono"></use></svg>
+            </span>
+            <h3>Lapislázuli</h3>
+            <p>Sabiduría y expresión.</p>
+          </article>
+
+          <article class="significado revelar">
+            <span class="significado__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-hoja"></use></svg>
+            </span>
+            <h3>Aventurina verde</h3>
+            <p>Suerte y prosperidad.</p>
+          </article>
+
+          <article class="significado revelar">
+            <span class="significado__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-escudo"></use></svg>
+            </span>
+            <h3>Ónix negro</h3>
+            <p>Protección y fortaleza.</p>
+          </article>
+
+          <article class="significado revelar">
+            <span class="significado__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-ojo-turco"></use></svg>
+            </span>
+            <h3>Ojo turco</h3>
+            <p>Protección contra la envidia.</p>
+          </article>
+
+          <article class="significado revelar">
+            <span class="significado__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-mano-fatima"></use></svg>
+            </span>
+            <h3>Mano de Fátima</h3>
+            <p>Protección y buena fortuna.</p>
+          </article>
+
+          <article class="significado revelar">
+            <span class="significado__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-arbol"></use></svg>
+            </span>
+            <h3>Árbol de la vida</h3>
+            <p>Crecimiento y conexión.</p>
+          </article>
+
+          <article class="significado revelar">
+            <span class="significado__icono" aria-hidden="true">
+              <svg class="icono" focusable="false"><use href="#i-medalla"></use></svg>
+            </span>
+            <h3>Medallas religiosas</h3>
+            <p>Protección y devoción.</p>
+          </article>
+        </div>
+
+        <p class="significados__aviso">
+          <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-info"></use></svg>
+          <span>Estos significados provienen de creencias y tradiciones populares y no reemplazan la atención médica.</span>
+        </p>
+
+        <div class="significados__accion">
+          <a class="btn" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20para%20elegir%20mi%20amuleto." target="_blank" rel="noopener noreferrer">
+            <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+            Pídenos asesoría por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         K. CUIDADO DE LAS PIEZAS
+         ======================================================== -->
+    <section class="seccion seccion--cuidado" id="cuidado" aria-labelledby="titulo-cuidado">
+      <div class="contenedor">
+        <div class="cuidado__panel revelar">
+          <div class="cuidado__intro">
+            <svg class="adorno-loto" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+              <use href="#i-loto"></use>
+            </svg>
+            <p class="eyebrow">Para conservarlas</p>
+            <h2 id="titulo-cuidado">Cuidado de las piezas</h2>
+            <p>Pequeños gestos ayudan a conservar la belleza y la durabilidad de cada pieza.</p>
+          </div>
+
+          <ul class="cuidado__lista">
+            <li>
+              <span class="cuidado__icono" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-caja"></use></svg>
+              </span>
+              <p>Guárdalas en un lugar seco.</p>
+            </li>
+            <li>
+              <span class="cuidado__icono" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-cadena"></use></svg>
+              </span>
+              <p>Evita golpes y jalones al hilo.</p>
+            </li>
+            <li>
+              <span class="cuidado__icono" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-gota-tachada"></use></svg>
+              </span>
+              <p>Aleja las piezas de químicos fuertes como el cloro.</p>
+            </li>
+            <li>
+              <span class="cuidado__icono" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-pano"></use></svg>
+              </span>
+              <p>Límpialas con un paño suave y seco.</p>
+            </li>
+            <li>
+              <span class="cuidado__icono" aria-hidden="true">
+                <svg class="icono" focusable="false"><use href="#i-sol"></use></svg>
+              </span>
+              <p>Evita el sol prolongado, porque algunas piedras pueden perder intensidad.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         L. CONTACTO
+         ======================================================== -->
+    <section class="seccion seccion--contacto" id="contacto" aria-labelledby="titulo-contacto">
+      <svg class="contacto__loto" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <use href="#i-loto"></use>
+      </svg>
+
+      <div class="contenedor">
+        <p class="eyebrow">Hablemos</p>
+        <h2 id="titulo-contacto">Contacto</h2>
+        <p class="contacto__texto">Escríbenos por WhatsApp y te asesoramos.</p>
+
+        <div class="contacto__principal">
+          <a class="btn btn--claro btn--grande" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20hacer%20un%20pedido%20y%20recibir%20asesor%C3%ADa." target="_blank" rel="noopener noreferrer">
+            <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+            Escríbenos por WhatsApp
+          </a>
+        </div>
+
+        <div class="contacto__datos">
+          <a class="contacto__dato" href="https://wa.me/573224416570" target="_blank" rel="noopener noreferrer">
+            <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+            +57 322 441 65 70
+          </a>
+          <a class="contacto__dato" href="https://www.instagram.com/amuletos_de_luz/" target="_blank" rel="noopener noreferrer">
+            <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-instagram"></use></svg>
+            @amuletos_de_luz
+          </a>
+        </div>
+
+        <p class="contacto__nota">
+          <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-pago"></use></svg>
+          Pago coordinado por WhatsApp
+        </p>
+        <p class="contacto__lugar">Soacha, Cundinamarca, Colombia</p>
+      </div>
+    </section>
+
+    <!-- El pie de página cierra la página y reúne toda la navegación -->
+  </main>
+
+  <footer class="pie" aria-label="Pie de página">
+    <div class="contenedor">
+      <div class="pie__grid">
+        <div class="pie__marca">
+          <a class="marca" href="#inicio" aria-label="Amuletos de Luz, volver al inicio">
+            <span class="pie__logo">
+              <img src="img/logo.jpg" width="500" height="500" loading="lazy" decoding="async" alt="Logo de Amuletos de Luz">
+            </span>
+            <span class="marca__texto">
+              <span class="marca__nombre">Amuletos de Luz</span>
+              <span class="marca__lema">Diseñamos Accesorios con Propósito</span>
+            </span>
+          </a>
+          <p class="pie__slogan">Diseñamos Accesorios con Propósito</p>
+          <p class="pie__lugar">Soacha, Cundinamarca, Colombia</p>
+        </div>
+
+        <nav class="pie__nav" aria-label="Enlaces del pie de página">
+          <p class="pie__titulo">Explora</p>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#quienes-somos">Quiénes somos</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#destacados">Destacados</a></li>
+            <li><a href="#sobre-la-persona">Sobre la persona</a></li>
+            <li><a href="#sobre-la-empresa">Sobre la empresa</a></li>
+            <li><a href="#envios">Envíos y devoluciones</a></li>
+            <li><a href="#preguntas">Preguntas frecuentes</a></li>
+            <li><a href="#opiniones">Opiniones</a></li>
+            <li><a href="#significados">Significados</a></li>
+            <li><a href="#cuidado">Cuidado de las piezas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="pie__contacto">
+          <p class="pie__titulo">Contacto</p>
+          <a href="https://wa.me/573224416570" target="_blank" rel="noopener noreferrer">
+            <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+            +57 322 441 65 70
+          </a>
+          <a href="https://www.instagram.com/amuletos_de_luz/" target="_blank" rel="noopener noreferrer">
+            <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-instagram"></use></svg>
+            @amuletos_de_luz
+          </a>
+          <p class="pie__pago">Pago coordinado por WhatsApp</p>
+        </div>
+      </div>
+
+      <div class="pie__base">
+        <p>© <span id="anio-actual">2026</span> Amuletos de Luz</p>
+        <p>Joyería artesanal con intención.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp, siempre accesible -->
+  <a class="whatsapp-flotante" href="https://wa.me/573224416570?text=Hola%2C%20Amuletos%20de%20Luz.%20Quiero%20hacer%20un%20pedido%20y%20recibir%20asesor%C3%ADa." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp al +57 322 441 65 70">
+    <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+  </a>
+
+  <!-- Visor accesible para ampliar las fotografías del catálogo -->
+  <dialog class="visor" id="visor" aria-labelledby="visor-leyenda">
+    <div class="visor__marco">
+      <button type="button" class="visor__cerrar" data-visor-cerrar aria-label="Cerrar imagen ampliada">
+        <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-cerrar"></use></svg>
+      </button>
+
+      <figure class="visor__figura">
+        <img class="visor__imagen" id="visor-imagen" src="img/producto1.jpg" width="1024" height="1024" loading="lazy" decoding="async" alt="Cielo Profundo: pulsera doble de piedras azules irregulares con dije dorado en forma de corazón (vista ampliada)">
+        <figcaption class="visor__leyenda" id="visor-leyenda">Cielo Profundo</figcaption>
+      </figure>
+
+      <div class="visor__controles">
+        <button type="button" class="visor__nav" data-visor-anterior aria-label="Ver imagen anterior">
+          <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-chevron-izq"></use></svg>
+        </button>
+        <p class="visor__contador" id="visor-contador" aria-live="polite">1 / 10</p>
+        <button type="button" class="visor__nav" data-visor-siguiente aria-label="Ver imagen siguiente">
+          <svg class="icono" aria-hidden="true" focusable="false"><use href="#i-chevron-der"></use></svg>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var qs = function (selector, contexto) {
+        return (contexto || document).querySelector(selector);
+      };
+      var qsa = function (selector, contexto) {
+        return Array.prototype.slice.call((contexto || document).querySelectorAll(selector));
+      };
+      var movimientoReducido = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      function escucharMedia(consulta, callback) {
+        if (typeof consulta.addEventListener === "function") {
+          consulta.addEventListener("change", callback);
+        } else if (typeof consulta.addListener === "function") {
+          consulta.addListener(callback);
+        }
+      }
+
+      function numeroDosDigitos(numero) {
+        return String(numero).padStart(2, "0");
+      }
+
+      /* ========================================================
+         MODO CLARO / OSCURO
+         La elección se recuerda si localStorage está disponible.
+         ======================================================== */
+      var raiz = document.documentElement;
+      var botonTema = qs("#boton-tema");
+      var metaTema = qs('meta[name="theme-color"]');
+
+      function actualizarBotonTema() {
+        if (!botonTema) return;
+        var esOscuro = raiz.getAttribute("data-tema") === "oscuro";
+        botonTema.setAttribute("aria-pressed", String(esOscuro));
+        botonTema.setAttribute("aria-label", esOscuro ? "Activar modo claro" : "Activar modo oscuro");
+        if (metaTema) {
+          metaTema.setAttribute("content", esOscuro ? "#171013" : "#8B1A3A");
+        }
+      }
+
+      function aplicarTema(tema) {
+        raiz.setAttribute("data-tema", tema);
+        actualizarBotonTema();
+        try {
+          localStorage.setItem("amuletos-tema", tema);
+        } catch (error) {
+          /* La navegación continúa aunque el almacenamiento no esté disponible. */
+        }
+      }
+
+      actualizarBotonTema();
+
+      if (botonTema) {
+        botonTema.addEventListener("click", function () {
+          var temaActual = raiz.getAttribute("data-tema") === "oscuro" ? "oscuro" : "claro";
+          aplicarTema(temaActual === "oscuro" ? "claro" : "oscuro");
+        });
+      }
+
+      /* ========================================================
+         ENCABEZADO CON SOMBRA AL DESPLAZAR
+         ======================================================== */
+      var encabezado = qs("#encabezado");
+      function actualizarEncabezado() {
+        if (!encabezado) return;
+        encabezado.classList.toggle("compacto", window.scrollY > 16);
+      }
+      actualizarEncabezado();
+      window.addEventListener("scroll", actualizarEncabezado, { passive: true });
+
+      /* ========================================================
+         MENÚ DE NAVEGACIÓN MÓVIL
+         ======================================================== */
+      var botonMenu = qs("#boton-menu");
+      var menuMovil = qs("#menu-movil");
+      var menuCerrar = qs("#menu-cerrar");
+      var menuFondo = qs("#menu-fondo");
+      var ultimoFocoMenu = null;
+      var temporizadorCierreMenu = null;
+      var mediaEscritorio = window.matchMedia("(min-width: 1120px)");
+      var capasFondoMenu = [qs("#contenido-principal"), qs(".pie"), qs(".whatsapp-flotante")].filter(Boolean);
+
+      function elementosEnfocablesMenu() {
+        if (!menuMovil) return [];
+        return qsa('a[href], button:not([disabled]):not([tabindex="-1"])', menuMovil).filter(function (elemento) {
+          return elemento.offsetParent !== null;
+        });
+      }
+
+      function marcarFondoMenu(oculto) {
+        capasFondoMenu.forEach(function (capa) {
+          if (oculto) {
+            capa.setAttribute("inert", "");
+          } else {
+            capa.removeAttribute("inert");
+          }
+        });
+      }
+
+      function abrirMenu() {
+        if (!menuMovil || !botonMenu) return;
+        window.clearTimeout(temporizadorCierreMenu);
+        ultimoFocoMenu = document.activeElement;
+        menuMovil.hidden = false;
+        document.body.classList.add("menu-abierto");
+        botonMenu.setAttribute("aria-expanded", "true");
+        botonMenu.setAttribute("aria-label", "Cerrar menú");
+        marcarFondoMenu(true);
+        void menuMovil.offsetHeight;
+        menuMovil.classList.add("abierto");
+        window.requestAnimationFrame(function () {
+          window.setTimeout(function () {
+            if (menuCerrar && !menuMovil.hidden) menuCerrar.focus();
+          }, movimientoReducido.matches ? 0 : 90);
+        });
+      }
+
+      function cerrarMenu(devolverFoco) {
+        if (!menuMovil || !botonMenu) return;
+        menuMovil.classList.remove("abierto");
+        document.body.classList.remove("menu-abierto");
+        botonMenu.setAttribute("aria-expanded", "false");
+        botonMenu.setAttribute("aria-label", "Abrir menú");
+        marcarFondoMenu(false);
+        window.clearTimeout(temporizadorCierreMenu);
+        temporizadorCierreMenu = window.setTimeout(function () {
+          if (!menuMovil.classList.contains("abierto")) {
+            menuMovil.hidden = true;
+            if (devolverFoco !== false) {
+              var focoValido = ultimoFocoMenu && ultimoFocoMenu !== document.body && ultimoFocoMenu !== document.documentElement && document.contains(ultimoFocoMenu);
+              var focoDestino = focoValido ? ultimoFocoMenu : botonMenu;
+              if (focoDestino) focoDestino.focus();
+            }
+          }
+        }, movimientoReducido.matches ? 0 : 380);
+      }
+
+      if (botonMenu && menuMovil) {
+        botonMenu.addEventListener("click", function () {
+          var estaAbierto = botonMenu.getAttribute("aria-expanded") === "true";
+          if (estaAbierto) {
+            cerrarMenu(true);
+          } else {
+            abrirMenu();
+          }
+        });
+
+        if (menuCerrar) {
+          menuCerrar.addEventListener("click", function () {
+            cerrarMenu(true);
+          });
+        }
+
+        if (menuFondo) {
+          menuFondo.addEventListener("click", function () {
+            cerrarMenu(true);
+          });
+        }
+
+        qsa("a[href]", menuMovil).forEach(function (enlace) {
+          enlace.addEventListener("click", function () {
+            cerrarMenu(false);
+          });
+        });
+
+        menuMovil.addEventListener("keydown", function (evento) {
+          if (menuMovil.hidden) return;
+
+          if (evento.key === "Escape") {
+            evento.preventDefault();
+            cerrarMenu(true);
+            return;
+          }
+
+          if (evento.key !== "Tab") return;
+
+          var enfocables = elementosEnfocablesMenu();
+          if (enfocables.length === 0) return;
+          var primero = enfocables[0];
+          var ultimo = enfocables[enfocables.length - 1];
+
+          if (!menuMovil.contains(document.activeElement)) {
+            evento.preventDefault();
+            primero.focus();
+          } else if (evento.shiftKey && document.activeElement === primero) {
+            evento.preventDefault();
+            ultimo.focus();
+          } else if (!evento.shiftKey && document.activeElement === ultimo) {
+            evento.preventDefault();
+            primero.focus();
+          }
+        });
+
+        escucharMedia(mediaEscritorio, function (evento) {
+          if (evento.matches && menuMovil.classList.contains("abierto")) {
+            cerrarMenu(false);
+          }
+        });
+      }
+
+      /* El desplegable "Más" del menú de escritorio se cierra al elegir
+         un enlace, al hacer clic fuera o con Escape. */
+      var navMas = qs(".nav-mas");
+      if (navMas) {
+        document.addEventListener("click", function (evento) {
+          if (navMas.open && !navMas.contains(evento.target)) {
+            navMas.open = false;
+          }
+        });
+
+        document.addEventListener("keydown", function (evento) {
+          if (evento.key === "Escape" && navMas.open) {
+            navMas.open = false;
+            var resumen = qs("summary", navMas);
+            if (resumen) resumen.focus();
+          }
+        });
+
+        qsa("a", navMas).forEach(function (enlace) {
+          enlace.addEventListener("click", function () {
+            navMas.open = false;
+          });
+        });
+      }
+
+      /* ========================================================
+         APARICIÓN SUAVE AL BAJAR
+         ======================================================== */
+      var elementosRevelar = qsa(".revelar");
+      qsa("[data-revelar-grupo]").forEach(function (grupo) {
+        var hijos = Array.prototype.slice.call(grupo.children).filter(function (hijo) {
+          return hijo.classList.contains("revelar");
+        });
+        hijos.forEach(function (hijo, indice) {
+          hijo.style.setProperty("--demora", Math.min(indice, 5) * 80 + "ms");
+        });
+      });
+
+      if (movimientoReducido.matches || !("IntersectionObserver" in window)) {
+        elementosRevelar.forEach(function (elemento) {
+          elemento.classList.add("visible");
+        });
+      } else {
+        var observadorRevelar = new IntersectionObserver(function (entradas, observador) {
+          entradas.forEach(function (entrada) {
+            if (entrada.isIntersecting) {
+              entrada.target.classList.add("visible");
+              observador.unobserve(entrada.target);
+            }
+          });
+        }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
+
+        elementosRevelar.forEach(function (elemento) {
+          observadorRevelar.observe(elemento);
+        });
+      }
+
+      /* ========================================================
+         CARRUSELES (DESTACADOS Y OPINIONES)
+         ======================================================== */
+      function iniciarCarrusel(raizCarrusel) {
+        var pista = qs("[data-carrusel-pista]", raizCarrusel);
+        if (!pista) return;
+
+        var slides = Array.prototype.slice.call(pista.children);
+        if (slides.length === 0) return;
+
+        var tipo = raizCarrusel.getAttribute("data-carrusel") || "general";
+        var botonAnterior = qs("[data-carrusel-anterior]", raizCarrusel);
+        var botonSiguiente = qs("[data-carrusel-siguiente]", raizCarrusel);
+        var contenedorPuntos = qs("[data-carrusel-puntos]", raizCarrusel);
+        var contador = qs("[data-carrusel-contador]", raizCarrusel);
+        var estado = qs("[data-carrusel-estado]", raizCarrusel);
+        var intervalo = tipo === "opiniones" ? 6800 : 5400;
+        var indice = 0;
+        var pausado = false;
+        var temporizador = null;
+        var temporizadorRedimension = null;
+        var puntos = [];
+
+        function visibles() {
+          if (tipo !== "productos") return 1;
+          if (window.innerWidth >= 1024) return 3;
+          if (window.innerWidth >= 640) return 2;
+          return 1;
+        }
+
+        function posiciones() {
+          return Math.max(1, slides.length - visibles() + 1);
+        }
+
+        function nombreSlide(slide) {
+          var titulo = qs("h3", slide);
+          return titulo ? titulo.textContent.trim() : "";
+        }
+
+        function autorSlide(slide) {
+          var autor = qs(".testimonio__autor", slide);
+          return autor ? autor.textContent.replace(/—/g, "").trim() : "";
+        }
+
+        function paso() {
+          var estilos = window.getComputedStyle(pista);
+          var separacion = parseFloat(estilos.columnGap || estilos.gap) || 0;
+          return slides[0].getBoundingClientRect().width + separacion;
+        }
+
+        function crearPuntos() {
+          if (!contenedorPuntos) return;
+          contenedorPuntos.innerHTML = "";
+          puntos = [];
+          var total = posiciones();
+
+          for (var i = 0; i < total; i += 1) {
+            (function (posicion) {
+              var boton = document.createElement("button");
+              boton.type = "button";
+              boton.className = "punto";
+              if (tipo === "opiniones") {
+                boton.setAttribute("aria-label", "Ver opinión " + (posicion + 1) + " de " + slides.length + ": " + autorSlide(slides[posicion]));
+              } else {
+                boton.setAttribute("aria-label", "Ver productos destacados desde " + nombreSlide(slides[posicion]));
+              }
+              boton.addEventListener("click", function () {
+                irA(posicion, true);
+                reiniciarAuto();
+              });
+              contenedorPuntos.appendChild(boton);
+              puntos.push(boton);
+            })(i);
+          }
+        }
+
+        function actualizarPuntos() {
+          puntos.forEach(function (punto, posicion) {
+            if (posicion === indice) {
+              punto.setAttribute("aria-current", "true");
+            } else {
+              punto.removeAttribute("aria-current");
+            }
+          });
+        }
+
+        function actualizarVisibilidadSlides() {
+          var cantidad = visibles();
+          slides.forEach(function (slide, posicion) {
+            var visible = posicion >= indice && posicion < indice + cantidad;
+            slide.setAttribute("aria-hidden", String(!visible));
+            try {
+              slide.inert = !visible;
+            } catch (error) {
+              /* Si inert no está disponible, se conserva la navegación normal. */
+            }
+          });
+        }
+
+        function actualizarEstado(anunciar) {
+          if (contador) {
+            contador.textContent = numeroDosDigitos(indice + 1) + " / " + numeroDosDigitos(slides.length);
+          }
+          if (!estado) return;
+
+          if (tipo === "opiniones") {
+            estado.textContent = "Opinión " + (indice + 1) + " de " + slides.length + ".";
+          } else {
+            var cantidad = visibles();
+            var ultimoVisible = Math.min(indice + cantidad, slides.length);
+            estado.textContent = "Mostrando productos " + (indice + 1) + " a " + ultimoVisible + " de " + slides.length + ".";
+          }
+          if (!anunciar) {
+            estado.setAttribute("aria-live", "off");
+          } else {
+            estado.setAttribute("aria-live", "polite");
+          }
+        }
+
+        function irA(nuevoIndice, anunciar) {
+          var maximo = posiciones() - 1;
+          indice = Math.max(0, Math.min(nuevoIndice, maximo));
+          pista.style.transform = "translate3d(-" + indice * paso() + "px, 0, 0)";
+          actualizarPuntos();
+          actualizarVisibilidadSlides();
+          actualizarEstado(Boolean(anunciar));
+        }
+
+        function desplazar(direccion, anunciar) {
+          var maximo = posiciones() - 1;
+          var destino = indice + direccion;
+          if (destino < 0) destino = maximo;
+          if (destino > maximo) destino = 0;
+          irA(destino, anunciar);
+        }
+
+        function detenerAuto() {
+          if (temporizador) {
+            window.clearInterval(temporizador);
+            temporizador = null;
+          }
+        }
+
+        function iniciarAuto() {
+          detenerAuto();
+          if (movimientoReducido.matches || pausado || document.hidden) return;
+          temporizador = window.setInterval(function () {
+            if (!pausado && !document.hidden) {
+              desplazar(1, false);
+            }
+          }, intervalo);
+        }
+
+        function reiniciarAuto() {
+          detenerAuto();
+          if (!pausado) iniciarAuto();
+        }
+
+        function pausar() {
+          pausado = true;
+          detenerAuto();
+        }
+
+        function reanudar() {
+          pausado = false;
+          iniciarAuto();
+        }
+
+        if (botonAnterior) {
+          botonAnterior.addEventListener("click", function () {
+            desplazar(-1, true);
+            reiniciarAuto();
+          });
+        }
+
+        if (botonSiguiente) {
+          botonSiguiente.addEventListener("click", function () {
+            desplazar(1, true);
+            reiniciarAuto();
+          });
+        }
+
+        raizCarrusel.addEventListener("pointerenter", pausar);
+        raizCarrusel.addEventListener("pointerleave", reanudar);
+        raizCarrusel.addEventListener("touchstart", pausar, { passive: true });
+        raizCarrusel.addEventListener("touchend", reanudar, { passive: true });
+        raizCarrusel.addEventListener("focusin", pausar);
+        raizCarrusel.addEventListener("focusout", function (evento) {
+          if (!raizCarrusel.contains(evento.relatedTarget)) {
+            reanudar();
+          }
+        });
+
+        document.addEventListener("visibilitychange", function () {
+          if (document.hidden) {
+            detenerAuto();
+          } else if (!pausado) {
+            iniciarAuto();
+          }
+        });
+
+        escucharMedia(movimientoReducido, function (evento) {
+          if (evento.matches) {
+            detenerAuto();
+          } else if (!pausado) {
+            iniciarAuto();
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          window.clearTimeout(temporizadorRedimension);
+          temporizadorRedimension = window.setTimeout(function () {
+            var maximo = posiciones() - 1;
+            if (indice > maximo) indice = maximo;
+            crearPuntos();
+            irA(indice, false);
+          }, 160);
+        }, { passive: true });
+
+        crearPuntos();
+        window.requestAnimationFrame(function () {
+          irA(0, true);
+          iniciarAuto();
+        });
+
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () {
+            irA(indice, false);
+          }).catch(function () {
+            /* Sin repercusión si la carga de fuentes no está disponible. */
+          });
+        }
+      }
+
+      qsa("[data-carrusel]").forEach(iniciarCarrusel);
+
+      /* ========================================================
+         ACORDEÓN DE PREGUNTAS FRECUENTES
+         ======================================================== */
+      var botonesFaq = qsa(".faq__boton");
+      var temporizadoresFaq = new WeakMap();
+
+      function abrirFaq(boton) {
+        var panel = document.getElementById(boton.getAttribute("aria-controls"));
+        if (!panel) return;
+        var temporizador = temporizadoresFaq.get(panel);
+        if (temporizador) window.clearTimeout(temporizador);
+        boton.setAttribute("aria-expanded", "true");
+        panel.hidden = false;
+        window.requestAnimationFrame(function () {
+          panel.classList.add("is-open");
+        });
+      }
+
+      function cerrarFaq(boton) {
+        var panel = document.getElementById(boton.getAttribute("aria-controls"));
+        if (!panel) return;
+        boton.setAttribute("aria-expanded", "false");
+        panel.classList.remove("is-open");
+        var temporizador = temporizadoresFaq.get(panel);
+        if (temporizador) window.clearTimeout(temporizador);
+        temporizadoresFaq.set(panel, window.setTimeout(function () {
+          if (boton.getAttribute("aria-expanded") === "false") {
+            panel.hidden = true;
+          }
+        }, movimientoReducido.matches ? 0 : 380));
+      }
+
+      botonesFaq.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+          var estaAbierto = boton.getAttribute("aria-expanded") === "true";
+          if (estaAbierto) {
+            cerrarFaq(boton);
+          } else {
+            botonesFaq.forEach(function (otro) {
+              if (otro !== boton && otro.getAttribute("aria-expanded") === "true") {
+                cerrarFaq(otro);
+              }
+            });
+            abrirFaq(boton);
+          }
+        });
+
+        boton.addEventListener("keydown", function (evento) {
+          var actual = botonesFaq.indexOf(boton);
+          var destino = null;
+          if (evento.key === "ArrowDown") destino = (actual + 1) % botonesFaq.length;
+          if (evento.key === "ArrowUp") destino = (actual - 1 + botonesFaq.length) % botonesFaq.length;
+          if (evento.key === "Home") destino = 0;
+          if (evento.key === "End") destino = botonesFaq.length - 1;
+          if (destino !== null) {
+            evento.preventDefault();
+            botonesFaq[destino].focus();
+          }
+        });
+      });
+
+      /* ========================================================
+         VISOR AMPLIADO DEL CATÁLOGO
+         ======================================================== */
+      var visor = qs("#visor");
+      if (visor && typeof visor.showModal === "function") {
+        var disparadoresVisor = qsa("[data-visor-indice]");
+        var imagenesVisor = disparadoresVisor.map(function (boton) {
+          var imagen = qs("img", boton);
+          var producto = boton.closest(".producto");
+          var titulo = producto ? qs("h3", producto) : null;
+          return {
+            src: imagen ? imagen.getAttribute("src") : "",
+            alt: imagen ? imagen.getAttribute("alt") : "",
+            nombre: titulo ? titulo.textContent.trim() : ""
+          };
+        }).filter(function (imagen) {
+          return Boolean(imagen.src);
+        });
+
+        if (imagenesVisor.length > 0) {
+          var visorImagen = qs("#visor-imagen");
+          var visorLeyenda = qs("#visor-leyenda");
+          var visorContador = qs("#visor-contador");
+          var visorCerrar = qs("[data-visor-cerrar]");
+          var visorAnterior = qs("[data-visor-anterior]");
+          var visorSiguiente = qs("[data-visor-siguiente]");
+          var indiceVisor = 0;
+          var disparadorVisor = null;
+
+          var precargarVisor = function (indiceDestino) {
+            var dato = imagenesVisor[(indiceDestino + imagenesVisor.length) % imagenesVisor.length];
+            if (!dato) return;
+            var precarga = new Image();
+            precarga.src = dato.src;
+          };
+
+          var actualizarVisor = function () {
+            var dato = imagenesVisor[indiceVisor];
+            if (!dato) return;
+            visorImagen.setAttribute("src", dato.src);
+            visorImagen.setAttribute("alt", dato.alt + " (vista ampliada)");
+            visorLeyenda.textContent = dato.nombre;
+            visorContador.textContent = (indiceVisor + 1) + " / " + imagenesVisor.length;
+            precargarVisor(indiceVisor + 1);
+            precargarVisor(indiceVisor - 1);
+          };
+
+          var abrirVisor = function (indice, boton) {
+            indiceVisor = Math.max(0, Math.min(indice, imagenesVisor.length - 1));
+            disparadorVisor = boton;
+            actualizarVisor();
+            if (!visor.open) {
+              visor.showModal();
+              document.body.classList.add("visor-abierto");
+            }
+            window.requestAnimationFrame(function () {
+              if (visorCerrar) visorCerrar.focus();
+            });
+          };
+
+          var moverVisor = function (direccion) {
+            indiceVisor = (indiceVisor + direccion + imagenesVisor.length) % imagenesVisor.length;
+            actualizarVisor();
+          };
+
+          disparadoresVisor.forEach(function (boton) {
+            var indice = Number(boton.getAttribute("data-visor-indice"));
+            if (Number.isNaN(indice)) return;
+            boton.addEventListener("click", function () {
+              abrirVisor(indice, boton);
+            });
+          });
+
+          if (visorCerrar) {
+            visorCerrar.addEventListener("click", function () {
+              visor.close();
+            });
+          }
+
+          if (visorAnterior) {
+            visorAnterior.addEventListener("click", function () {
+              moverVisor(-1);
+            });
+          }
+
+          if (visorSiguiente) {
+            visorSiguiente.addEventListener("click", function () {
+              moverVisor(1);
+            });
+          }
+
+          visor.addEventListener("click", function (evento) {
+            if (evento.target === visor) {
+              visor.close();
+            }
+          });
+
+          visor.addEventListener("keydown", function (evento) {
+            if (evento.key === "ArrowLeft") {
+              evento.preventDefault();
+              moverVisor(-1);
+            } else if (evento.key === "ArrowRight") {
+              evento.preventDefault();
+              moverVisor(1);
+            }
+          });
+
+          visor.addEventListener("close", function () {
+            document.body.classList.remove("visor-abierto");
+            if (disparadorVisor && document.contains(disparadorVisor)) {
+              disparadorVisor.focus();
+            }
+            disparadorVisor = null;
+          });
+        }
+      }
+
+      /* ========================================================
+         AÑO ACTUAL EN EL PIE DE PÁGINA
+         ======================================================== */
+      var anioActual = qs("#anio-actual");
+      if (anioActual) {
+        anioActual.textContent = String(new Date().getFullYear());
+      }
+    })();
+  </script>
+</body>
+</html>
